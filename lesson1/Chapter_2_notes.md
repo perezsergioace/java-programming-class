@@ -97,3 +97,166 @@ public class Adjust
 // Coffee
 // Asprin
 ```
+
+Do not put a space between the backslash and the control characters.
+
+## **2.3 Variables and Literals**
+A variable is a named storage location in the computer's memory. A literal is a value that is written into the code of a program.
+
+```java
+// This program has a variable.
+
+public class Variable
+{
+    public static void main(String[] args)
+    {
+        int value;
+
+        value = 5;
+        System.out.print("The value is ");
+        System.out.println(value);
+    }
+}
+
+// Program Output
+// The value is 5
+```
+
+line 7: int value;
+This is called a variable declaration.
+
+Variables must be declared before they can be used.
+
+line 9: value = 5
+This is called an assignment statement.
+
+You can use the + operator to concatenate the contents of a variable to a string.
+The following code shows an example:
+
+```java
+int number;
+
+number = 5;
+System.out.println("The value is" + number);
+
+// Output
+// The value is 5
+```
+
+You may choose your own variable names and class names in Java, as long as you do not use any of the Java key words.
+
+It is a standard practice to capitalize the first letter of a class name, as well as the first letter of each subsequent word it contains.
+
+This helps differentiate the names of variables from the names of classes.
+
+For example, payRate would be a variable name, and Employee would be a class name.
+
+## **2.4 Primitive Data Types**
+There are many different types of data. Variables are classified according to their data type, which determines the kind of data that may be stored in them.
+
+Each variable has a data type, which is the type of data that the variable ca hold.
+
+With the primitive data types, you can only create variables, and a variable can only be used to hold a single value.
+
+If a program uses three integers, length, width, and area, they could be declared separately, as follows:
+```java
+int length;
+int width;
+int area;
+```
+
+It is easier, however, to combine the three variable declarations:
+```java
+int length, width, area;
+```
+
+You can declare several variables of the same type, simply by separating their names with commas.
+
+In Java there are two data types that can represent floating0point numbers. They are **float** and **double**.
+
+A **float** variable occupies 4 bytes of memory, whereas a **double** variable uses 8 bytes.
+
+java is a strongly typed language, which means that it only allows you to store values of compatible data types in variables.
+
+The boolean data type may hold  two possible values: true or false.
+
+The contents of a boolean variable may not be copied to a variable of any type other than boolean.
+
+The **char** data type is used to store characters. A variable of the char data type can hold one character at a time.
+Characters literals are enclosed in a **single quotation marks**.
+
+## **2.5 Arithmetic Operators**
+There are many operators for manipulating numeric values and performing arithmetic operations.
+
+Generally, there are three types of operators: unary, binary, and ternary.
+
+Binary operators work with two operands.
+
+Ternary operators require three operands.
+
+When both operands of the division operator are integers, the operator will perform integer division.
+In order for a division operation to return a floating-point value, one of the operands must be of a floating-point data type.
+
+## **2.6 Combined Assignment Operators**
+The combined assignment operators combine the assignment operator with the arithmetic operators.
+
+## **2.7 Conversion between Primitive Data Types**
+Before a value can be stored in a variable, the value's data type must be compatible with the variable's data type.
+
+Java automatically converts the lower-ranked value to the higher-ranked type. This is called a *widening conversion*.
+
+A narrowing conversion is the conversion of a value to a lower-ranked type. Because narrowing conversions can potentially cause a loss of data, Java does not automatically perform them.
+
+The cast operator lets you manually convert a value, even if it means that a narrowing conversion will take place.
+
+## **2.8 Creating Named Constants with final**
+The final key word can be used in a variable declaration make the variable a named constant. Named constants are initialized with a value, and that value cannot change during the execution of the program.
+
+## **2.9 The String Class**
+The **String** class allows you to create objects for holding strings. It also has various methods that allow you to work with strings.
+
+Each object that is created from a class is called an instance of the class.
+
+The first step in using the String class is to declare a variable of the String class data type.
+
+Remember that String is a class, not a primitive data type.
+
+## **2.10 Scope**
+A variable's scope is the part of the program that has access to the variable.
+
+A variable is visible only to statements inside the variable's scope.
+
+Variables that are declared inside a method are called local variables.
+
+The variable cannot be accessed by statements that are outside this region.
+This means that a local variable cannot be accessed by statements that are outside this region.
+
+Another rule is that you cannot have two local variables with the same name in the same scope.
+
+## **2.11 Comments**
+Comments are notes of explanation that document lines or sections of a program.
+Comments are part of the program, but the compiler ignores them.
+They are intended for people who may be reading the source code.
+
+Any comment that starts with /** and end with */ is considered a documentation comment.
+```java
+/**
+ * This class creates a program that calculates company payroll.
+*/
+
+public class Comment3
+{
+    /**
+     * The main method is the program's starting point.
+    */
+
+    public static void main(String[] args)
+    {
+    double payRate;         // Holds the hourly pay rate
+    double hours;           // Holds the hours worked
+    int employeeNumber;     // Hold the employee number
+
+    // The Remained of This program is Omitted.
+    }
+}
+```
