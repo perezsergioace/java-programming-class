@@ -62,3 +62,38 @@ A semicolon marks the end of a statement in Java. Not every line of code ends wi
 * Comments do not have to end with a semicolon because they are ignored by the compiler.
 * Class headers and method header do not end with a semicolon because they are terminated with a body of code inside braces.
 * The brace characters, { and }, are not statements, so you do not place a semicolon after them.
+
+## **2.2 The print and println Methods, and the Java API**
+The print and println methods are used to display text output. They are part of the API, which is a collection of prewritten classes and methods for performing specific operations.
+
+The simplest type of output that a program can display on the screen is console output.
+
+The term API stands for Application Programmer Interface.
+
+The System **System** class contains objects and methods that perform system-level operations. One of the objects contained in the **System** class is named out.
+
+The out object has methods, such as print and println.
+
+The println method displays its message and then advances the cursor to the beginning of the next line.
+
+The print method, however, does not advance the cursor to the next line after its message is displayed.
+
+Use escape sequences to separate the output into different lines. As escape sequence starts with the backslash character (\), and its  followed by one or more control characters.
+
+```java
+public class Adjust
+{
+    public static void main(String[] args)
+    {
+        System.out.print("There are our top sellers:\n");
+        System.out.print("Computer games\nCoffee\n");
+        System.out.println("Asprin");
+    }
+}
+
+// Program Output
+// There are our top sellers:
+// Computer games
+// Coffee
+// Asprin
+```
