@@ -260,3 +260,51 @@ public class Comment3
     }
 }
 ```
+
+## **2.12 Programming Style**
+Programming style refers to the way a programmer uses spaces, indentations, blank lines, and punctuation characters to visually arrange a program's source code.
+
+## **2.12 Reading Keyboard Input**
+Objects of the **Scanner** class can be used to read input from the keyboard.
+
+The Scanner class is designed to read input from a source (such as System.in). and it, provides methods that you can use to retrieve the input formatted as primitive values or strings.
+
+Example:
+```java
+Scanner keyboard = new Scanner(System.in);
+```
+
+After the assignment operator we see the word new, which is a Java key word.
+The purpose of the new key word is to create an object in memory.
+Scanner object should be created, and it should be connected to the System.in object.
+
+The Scanner class is not automatically available to your Java programs.
+Any program that uses the Scanner class should have the following statement near the beginning of the file, before any class definition.
+```java
+import java.util.Scanner
+```
+This statement tells the Java compiler where in the Java library to find the Scanner class, and makes it available to your program.
+
+## **2.14 Dialog Boxes**
+The JOptionPane class allows you to quickly display a dialog box, which is a small graphical windows displaying a message or requesting input.
+System.exit(0); causes the program to end, and is necessary when you use the JOptionPane class in a console program.
+
+Use System.exit only when absolutely necessary. In a large program, System.exit can cause problems because it unconditionally shuts down the JVM, bypassing the program's normal, logical flow.
+
+## **2.15 Common Errors to Avoid**
+* Mismatched braces, quotation marks, or parentheses.
+* Misspelling key words
+* Using capital letters in key words
+* Using a key word as a variable name
+* Using inconsistent spelling of variable names
+* Inserting a space in a variable name
+* Forgetting the semicolon at the end of a statement
+* Assigning a double literal to a float variable
+* Using commas or other currency symbols in numeric literals
+* Unintentionally performing integer division
+* Forgetting to group parts of a mathematical expression
+* Inserting a space in a combined assignment operator
+* Using a variable to receive the result of a calculation when the variable's data type is incompatible with the data type of the result
+* Incorrectly terminating a multi-line comment or a documentation comment
+* Forgetting to use the correct import statement in a program that uses the Scanner class or the JOptionPane class
+* When using an input dialog to read numeric input, not converting the showInputDialog method's return value to a number
