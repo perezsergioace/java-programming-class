@@ -1,3 +1,4 @@
+// PayrollDialog.java Example
 import javax.swing.JOptionPane;
 
 public class PayrollDialog
