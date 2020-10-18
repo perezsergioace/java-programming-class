@@ -8,6 +8,27 @@ public class WeightOnPlanets
     public static void main(String[] args)
     {
         /** 
+         * creating Named Constants for Earth
+        */
+        final double EARTH_GRAVITY = 9.8;
+        final double EARTH_VELOCITY = 29.8;
+        /**
+         *  creating Named Constants for Mercury 
+        */
+        final double MERCURY_GRAVITY = 3.7;
+        final double MERCURY_VELOCITY = 47.4;
+        /** 
+         * creating Named Constants for Venus 
+        */
+        final double VENUS_GRAVITY = 8.9;
+        final double VENUS_VELOCITY = 35.0;
+        /**
+         *  creating Named Constants for Mars 
+        */
+        final double MARS_GRAVITY = 3.7;
+        final double MARS_VELOCITY = 24.1;
+
+        /** 
          * Creating variables 
         */
         double usersWeight;
@@ -17,11 +38,6 @@ public class WeightOnPlanets
          * creating variable for Earth distance traveled 
         */
         double distanceTraveledEarth;
-        /** 
-         * creating Named Constants for Earth
-        */
-        double EARTH_GRAVITY = 9.8;
-        double EARTH_VELOCITY = 29.8;
 
         /**
          *  variables for Mercury
@@ -29,11 +45,6 @@ public class WeightOnPlanets
         double mercuryWeight;
         double percentageMercuryToEarth;
         double distanceTraveledMercury;
-        /**
-         *  creating Named Constants for Mercury 
-        */
-        double MERCURY_GRAVITY = 3.7;
-        double MERCURY_VELOCITY = 47.4;
 
         /**
          *  variables for Venus 
@@ -41,11 +52,6 @@ public class WeightOnPlanets
         double venusWeight;
         double percentageVenusToEarth;
         double distanceTraveledVenus;
-        /** 
-         * creating Named Constants for Venus 
-        */
-        double VENUS_GRAVITY = 8.9;
-        double VENUS_VELOCITY = 35.0;
 
         /**
          *  variables for Venus 
@@ -53,11 +59,6 @@ public class WeightOnPlanets
         double marsWeight;
         double percentageMarsToEarth;
         double distanceTraveledMars;
-        /**
-         *  creating Named Constants for Mars 
-        */
-        double MARS_GRAVITY = 3.7;
-        double MARS_VELOCITY = 24.1;
 
         /**
          *  Creating a Scanner object to read input. 
