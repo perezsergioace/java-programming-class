@@ -77,6 +77,8 @@ public class WeightOnPlanets
         System.out.print("Please enter the duration, in hours, of the trip: ");
         duration = keyboard.nextDouble();
 
+        // keyboard.close();
+
         /**
          *  Calculations for Distance traveled (Earth)
         */
