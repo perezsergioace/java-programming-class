@@ -1,87 +1,52 @@
-/** 
- * Importing Scanner to be used for user input 
-*/
+// Import Scanner to be used for user input 
 import java.util.Scanner;
 
 public class WeightOnPlanets
 {
     public static void main(String[] args)
     {
-        /** 
-         * creating Named Constants for Earth
-        */
+        // create Named Constants for Planets
         final double EARTH_GRAVITY = 9.8;
         final double EARTH_VELOCITY = 29.8;
-        /**
-         *  creating Named Constants for Mercury 
-        */
         final double MERCURY_GRAVITY = 3.7;
         final double MERCURY_VELOCITY = 47.4;
-        /** 
-         * creating Named Constants for Venus 
-        */
         final double VENUS_GRAVITY = 8.9;
         final double VENUS_VELOCITY = 35.0;
-        /**
-         *  creating Named Constants for Mars 
-        */
         final double MARS_GRAVITY = 3.7;
         final double MARS_VELOCITY = 24.1;
-
-        /** 
-         * Creating variables 
-        */
+        
+        // Create user input variables 
         double usersWeight;
         double duration;
 
-        /** 
-         * creating variable for Earth distance traveled 
-        */
+        // create variable for Earth distance traveled 
         double distanceTraveledEarth;
 
-        /**
-         *  variables for Mercury
-        */
+        // create planet variables
         double mercuryWeight;
         double percentageMercuryToEarth;
         double distanceTraveledMercury;
-
-        /**
-         *  variables for Venus 
-        */
         double venusWeight;
         double percentageVenusToEarth;
         double distanceTraveledVenus;
-
-        /**
-         *  variables for Venus 
-        */
         double marsWeight;
         double percentageMarsToEarth;
         double distanceTraveledMars;
 
-        /**
-         *  Creating a Scanner object to read input. 
-        */
+        // Creating a Scanner object to read input. 
         Scanner keyboard = new Scanner(System.in);
 
-        /**
-         *  Get the user's weight 
-        */
+        // Get the user's weight 
         System.out.print("Please enter your weight in kg on Earth: ");
         usersWeight = keyboard.nextDouble();
 
-        /**
-         *  Get duration of the trip from user (Mercury) 
-        */
+        // Get duration of the trip from user (Mercury) 
         System.out.print("Please enter the duration, in hours, of the trip: ");
         duration = keyboard.nextDouble();
 
         // keyboard.close();
 
-        /**
-         *  Calculations for Distance traveled (Earth)
-        */
+        // Calculate for Distance traveled (Earth)
         distanceTraveledEarth = (duration * EARTH_VELOCITY) * 60 * 60;
 
         /**
