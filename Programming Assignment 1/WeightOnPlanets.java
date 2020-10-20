@@ -46,33 +46,19 @@ public class WeightOnPlanets
 
         // keyboard.close();
 
-        // Calculate for Distance traveled (Earth)
+        // Calculate for Distance traveled and weight conversion
         distanceTraveledEarth = (duration * EARTH_VELOCITY) * 60 * 60;
-
-        /**
-         *  Calculations for Mercury weight 
-        */
         mercuryWeight = MERCURY_GRAVITY * (usersWeight / EARTH_GRAVITY);
         percentageMercuryToEarth = (MERCURY_GRAVITY / EARTH_GRAVITY) * 100;
         distanceTraveledMercury = (duration * MERCURY_VELOCITY) * 60 * 60;
-
-        /**
-         *  Calculations for Venus weight 
-        */
         venusWeight = VENUS_GRAVITY * (usersWeight / EARTH_GRAVITY);
         percentageVenusToEarth = (VENUS_GRAVITY / EARTH_GRAVITY) * 100;
         distanceTraveledVenus = (duration * VENUS_VELOCITY) * 60 * 60;
-
-        /**
-         *  Calculations for Mars weight 
-        */
         marsWeight = MARS_GRAVITY * (usersWeight / EARTH_GRAVITY);
         percentageMarsToEarth = (MARS_GRAVITY / EARTH_GRAVITY) * 100;
         distanceTraveledMars = (duration * MARS_VELOCITY) * 60 * 60;
 
-        /**
-         * Displaying weight, and percentage for the planets(Mercury, Venus, and Mars).
-         */
+        // Display weight, and percentage for the planets(Mercury, Venus, and Mars).
         System.out.print("Your weight on Mercury is " + mercuryWeight + " kg, which is \n");
         System.out.print(percentageMercuryToEarth + " percent of your weight on Earth.\n");
 
@@ -82,9 +68,7 @@ public class WeightOnPlanets
         System.out.print("Your weight on Mars is " + marsWeight + " kg, which is \n");
         System.out.print(percentageMarsToEarth + " percent of your weight on Earth.\n");
 
-        /**
-         * Displaying the distance traveled for the planets (Mercury, Venus, Earth, and Mars).
-         */
+        // Display the distance traveled for the planets (Mercury, Venus, Earth, and Mars).
         System.out.print("In " + duration + " hours, Mercury will travel " + distanceTraveledMercury + " km.\n");
         System.out.print("In " + duration + " hours, Venus will travel " + distanceTraveledVenus + " km.\n");
         System.out.print("In " + duration + " hours, Earth will travel " + distanceTraveledEarth + " km.\n");
