@@ -44,6 +44,7 @@ public class WeightOnPlanets
         System.out.print("Please enter the duration, in hours, of the trip: ");
         duration = keyboard.nextDouble();
 
+        // This can also be put at the end of the program to close the resourse leak
         // keyboard.close();
 
         // Calculate for Distance traveled and weight conversion
