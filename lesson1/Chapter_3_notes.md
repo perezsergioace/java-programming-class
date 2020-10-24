@@ -94,3 +94,13 @@ else
 ```
 
 ## **3.9 The switch Statement**
+The switch statement lets the value of a variable or expression determine where the program will branch to.
+The switch statement is a multiple alternative decision structure. It allows you to test the value of a variable or an expression and then use that value to determine which statement or set of statements to execute.
+
+A case section begins with the word case, followed by a value, followed by a colon. Each case section contains one or more statements, followed by a break statement.
+After all of the case sections, an optional default section appears.
+
+If the testExpression does not match any of the case values, the program branches to the default statement and executes the statements that immediately follow it.
+
+The switch statement can be used as an alternative to an if-else-if statement that compares the same variable or expression to several different values.
+The default section is optional. If you leave it out, however, the program will have nowhere to branch to if the testExpression doesn't match any of the case values.
