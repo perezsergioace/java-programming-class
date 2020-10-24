@@ -169,3 +169,5 @@ System.out.printf("Nmae: %s, Hours: %d, Pay: $%,.2f\n", name, hours, pay);
 ```
 
 Java provides much more powerful format specifiers for more complex formatting needs.
+
+The System.out.printf method formats a string and displays it in the console window.
