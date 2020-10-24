@@ -104,3 +104,33 @@ If the testExpression does not match any of the case values, the program branche
 
 The switch statement can be used as an alternative to an if-else-if statement that compares the same variable or expression to several different values.
 The default section is optional. If you leave it out, however, the program will have nowhere to branch to if the testExpression doesn't match any of the case values.
+
+## **3.10 Displaying Formatted Output with System.out.printf and String.format**
+The System.out.printf method allows you to format output in a variety of ways. The String.format method allows you to format a string, without displaying it. The string can be displayed at a later time.
+```java
+double sales = 12345.67
+System.out.printf("Our sales are %f for the day.\n", sales);
+
+// Output: Our sales are 12345.67 for the day.
+```
+The letter f in the format specifier is a conversion character that indicates the data type of the argument that is being formatted.
+You use the f conversion character with any argument that is a float or a double.
+
+If you want to format an integer value, you must use the %d format specifier. The d conversion character stands for decimal integer, and it can be used with arguments of the int, short, and long data types.
+```java
+int hours = 40
+System.out.printf("I worked %d hours this week.\n", hours);
+
+// Output: I worked 40 hours this week.
+```
+
+Keep in mind that %f must be used with floating-point values, and %d must be used with integer values. Otherwise, an error will occur at runtime.
+
+Precision - You can change the number of decimal points that are displayed.
+```java
+double temp = 78.42819
+System.out.printf("The temperature is %.2f degrees.\n", temp);
+
+// Output: The temperature is 78.43 degrees.
+```
+Keep in mind that you can specify precision only with floating-point point values. If you specify a precision with the %d format specifier, an error will occur at runtime.
