@@ -26,3 +26,18 @@ To test more than one condition, an if statement can be nested inside another if
 
 ## **3.4 The if-else-if Statement**
 The if-else-if statement tests a series of conditions. It is often simpler to test a series of conditions with the if-else-if statement than with a set of nested if-else statements.
+
+## **3.5 Logical Operators**
+Logical operators connect two or more relational expressions into one or reverse the logic of an expression.
+
+The && operator is know a the logical AND operator. It takes two boolean expressions as operands and creates a boolean expression that is true only when both subexpressions are true.
+
+The || operator is known as the logical OR operator. It takes two boolean expressions as operands and creates a boolean expression that is true when either of the subexpressions is true.
+
+The ! Operator performs a logical NOT operation. It is a unary operator that takes a boolean expression as its operand and reverses its logical value.
+In other words, if the expression is true, the ! operator returns false, and if the expression is false, it returns true.
+The ! operator has a higher precedence than many of Java's other operators.
+When determining whether a number is inside a range, it's best to use the && operator.
+
+## **3.6 Comparing String Objects**
+You cannot use relational operators to compare String objects. Instead you must use a String method.
