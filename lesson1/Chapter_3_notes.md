@@ -134,3 +134,38 @@ System.out.printf("The temperature is %.2f degrees.\n", temp);
 // Output: The temperature is 78.43 degrees.
 ```
 Keep in mind that you can specify precision only with floating-point point values. If you specify a precision with the %d format specifier, an error will occur at runtime.
+
+You can format a number with comma separators by inserting a comma (,) flag into the format specifier.
+```java
+double amount = 1234567.89;
+System.out.printf("%,f\n", amount);
+
+// Output: 1,234,567.890000
+```
+
+```java
+double sales = 28756.89
+System.out.printf("Sales for the month are %,.2f\n", sales);
+
+// Output: 28,756.89
+```
+
+If you wish to print a string argument, use the %s format specifier.
+```java
+String name = "Ringo";
+System.out.printf("Your name is %s\n", name);
+
+// Output: Your name is Ringo
+```
+
+The following example shows how you can print arguments of different data types:
+```java
+int hour = 40;
+double pay = hours * 25;
+String name = "Jay";
+System.out.printf("Nmae: %s, Hours: %d, Pay: $%,.2f\n", name, hours, pay);
+
+// Output: Name: Jay, Hours: 40, Pay: $1,000.00
+```
+
+Java provides much more powerful format specifiers for more complex formatting needs.
