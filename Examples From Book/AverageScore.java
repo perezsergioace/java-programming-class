@@ -1,13 +1,12 @@
+// Import Scanner to be used for user input 
 import java.util.Scanner;
 
-public class AverageScore {
+public class AverageScore
+{
     public static void main(String[] args)
     {
-        double  score1,
-                score2,
-                score3,
-                average;
-        
+        double score1, score2, score3, average;
+
         Scanner keyboard = new Scanner(System.in);
 
         System.out.println("This program averages 3 test scores.");

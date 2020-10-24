@@ -20,3 +20,9 @@ The if statement can also conditionally execute a group of statements, as long a
 
 ## **3.2 The if-else Statement**
 The if-else statement will execute one group of statements if its boolean expression is true, or another group if its boolean expression is false.
+
+## **3.3 Nested if Statements**
+To test more than one condition, an if statement can be nested inside another if statement.
+
+## **3.4 The if-else-if Statement**
+The if-else-if statement tests a series of conditions. It is often simpler to test a series of conditions with the if-else-if statement than with a set of nested if-else statements.
