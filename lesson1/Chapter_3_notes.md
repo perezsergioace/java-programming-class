@@ -68,3 +68,29 @@ The equals and compareTo methods perform case-sensitive comparisons, which means
 
 The String class provides the equalsIgnoreCase and compareToIgnoreCase methods.
 These methods work like the equals and compareTo methods, except the case of the characters in the strings is ignored.
+
+## **3.7 More about Variable Declaration and Scope**
+The scope of a variable is limited to the block in which it is declared.
+
+A local variable's scope always starts at the variable's declaration, and ends at the closing brace of the block of code in which it is declared.
+
+## **3.8 The Conditional Operator (Optional)**
+You can use the conditional operator to create short expressions that work like if-else statements.
+The conditional operator is powerful and unique. Because it takes three operands, it is considered a ternary operator.
+The conditional operator provides a shorthand method of expressing a simple if-else statement.
+The operator consists of the question mark and the colon.
+```java
+BooleanExpression ? Value1 : Value2;
+```
+```java
+y = x < 0 ? 10: 20;
+```
+The preceding statement performs the same operations as the following if-else statement:
+```java
+if (x < 0)
+    y = 10
+else
+    y = 20
+```
+
+## **3.9 The switch Statement**
