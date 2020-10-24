@@ -41,3 +41,30 @@ When determining whether a number is inside a range, it's best to use the && ope
 
 ## **3.6 Comparing String Objects**
 You cannot use relational operators to compare String objects. Instead you must use a String method.
+
+A String object is referenced by a variable that contains the object's memory address. When you use a relational operator with the reference variable, the operator works on the memory address that the variable contains, not the contents of the String object.
+
+To compare the content of two String objects correctly, you should use the String class's equals method. The general form of the method is as follows:
+```java
+StringReference1.equals(StringREference2)
+```
+the method returns true if the two strings are equal, or false if they are not equal.
+```java
+String name1 = "Mark";
+String name2 = "Mary";
+if (name1.equals(name2))
+```
+The expression in the if statement will return true if they are the same, or false if they are not the same.
+You can also compare String objects to string literals. Simply pass the string literal as the argument to the equals method, as follows:
+```java
+if (name1.equals("Mark"))
+```
+To determine whether two strings are not equal, simply apply the ! operator to the equals method's return value. Here is an example:
+```java
+if (!name1.equals("Marks"))
+```
+
+The equals and compareTo methods perform case-sensitive comparisons, which means that uppercase letters are not considered the same as their lowercase counterparts.
+
+The String class provides the equalsIgnoreCase and compareToIgnoreCase methods.
+These methods work like the equals and compareTo methods, except the case of the characters in the strings is ignored.
