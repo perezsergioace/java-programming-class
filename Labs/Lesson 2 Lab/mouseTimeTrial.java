@@ -6,6 +6,7 @@ public class mouseTimeTrial {
     public static void main(String[] args) {
         // Create mouse variables
         double mouseCuriosity, mouseHunger, mouseSenseOfSmell, mouseCaution, mouseSpeed;
+        double mouseTypeATime, mouseTypeBTime, mouseTypeCTime;
         String mouseName;
         char mouseType;
 
@@ -37,5 +38,11 @@ public class mouseTimeTrial {
         System.out.print("Enter A, B, or C for mouse type: ");
         mouseType = keyboard.next().charAt(0);
 
+        // Calculate the mouse's time depending on mouse type(A, B, or C)
+        mouseTypeATime = Math.log(mouseCuriosity) + Math.log(mouseSpeed) / Math.log(2) + Math.log(mouseSenseOfSmell);
+        mouseTypeBTime = Math.log(mouseCaution) + Math.log(mouseHunger) / Math.log(2) + Math.log(mouseSenseOfSmell);
+        mouseTypeCTime = Math.log(mouseHunger) + Math.log(mouseSpeed) / Math.log(2) + Math.log(mouseCaution);
+
+        // System.out.printf("time through the maze is %.2f seconds.", mouseTypeBTime);
     }
 }
