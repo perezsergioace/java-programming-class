@@ -47,7 +47,7 @@ public class mouseTimeTrial {
         mouseName = keyboard.next();
         System.out.println(mouseName);
 
-        System.out.print("Enter A, B, or c for mouse type: ");
+        System.out.print("Enter A, B, or C for mouse type: ");
         mouseType = keyboard.next().charAt(0);
         System.out.print(mouseType);
 
