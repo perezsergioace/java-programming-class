@@ -1,4 +1,3 @@
-
 // Import Scanner
 import java.util.Scanner;
 
@@ -39,9 +38,10 @@ public class mouseTimeTrial {
         System.out.print("Enter A, B, or C for mouse type: ");
         mouseType = keyboard.next().charAt(0);
 
+        // Add the mouse quality points together
         mouseQualityPoints = mouseCuriosity + mouseHunger + mouseSenseOfSmell + mouseCaution + mouseSpeed;
 
-        // Check input validation
+        // Check user input/mouse information validation
         if (mouseQualityPoints > 15) {
             System.out.printf("You've used %d points - only 15 are allowed.\n", mouseQualityPoints);
             maxPointsBoolean = false;
@@ -49,7 +49,7 @@ public class mouseTimeTrial {
             maxPointsBoolean = true;
         }
 
-        if (mouseCuriosity < 1 || mouseHunger < 1 || mouseSenseOfSmell < 1 || mouseCaution < 1 || mouseSpeed > 1) {
+        if (mouseCuriosity < 1 || mouseHunger < 1 || mouseSenseOfSmell < 1 || mouseCaution < 1 || mouseSpeed < 1) {
             System.out.print("Each mouse quality must be assigned a minimum value of 1.\n");
             minimumMouseQualityBoolean = false;
         } else {
@@ -75,14 +75,26 @@ public class mouseTimeTrial {
         }
 
         if (maxPointsBoolean == true && minimumMouseQualityBoolean == true && mouseTypeBoolean == true) {
-            System.out.println("These all passed to do the calculations!");
+            switch (mouseType) {
+                case 'a':
+                case 'A':
+                    mouseTypeATime = Math.log(mouseCuriosity) + Math.log(mouseSpeed) / Math.log(2)
+                            + Math.log(mouseSenseOfSmell);
+                    System.out.printf("%s's time through the maze is %.2f seconds.", mouseName, mouseTypeATime);
+                    break;
+                case 'b':
+                case 'B':
+                    mouseTypeBTime = Math.log(mouseCaution) + Math.log(mouseHunger) / Math.log(2)
+                            + Math.log(mouseSenseOfSmell);
+                    System.out.printf("%s's time through the maze is %.2f seconds.", mouseName, mouseTypeBTime);
+                    break;
+                case 'c':
+                case 'C':
+                    mouseTypeCTime = Math.log(mouseHunger) + Math.log(mouseSpeed) / Math.log(2)
+                            + Math.log(mouseCaution);
+                    System.out.printf("%s's time through the maze is %.2f seconds.", mouseName, mouseTypeCTime);
+                    break;
+            }
         }
-
-        mouseTypeATime = Math.log(mouseCuriosity) + Math.log(mouseSpeed) / Math.log(2) + Math.log(mouseSenseOfSmell);
-        mouseTypeBTime = Math.log(mouseCaution) + Math.log(mouseHunger) / Math.log(2) + Math.log(mouseSenseOfSmell);
-        mouseTypeCTime = Math.log(mouseHunger) + Math.log(mouseSpeed) / Math.log(2) + Math.log(mouseCaution);
-
-        // System.out.printf("%s's time through the maze is %.2f seconds.", mouseName,
-        // mouseTypeBTime);
     }
 }
