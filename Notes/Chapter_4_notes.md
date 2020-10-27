@@ -78,3 +78,39 @@ A count-controlled loop must possess three elements:
 1. It must initialize a control variable to a starting value.
 2. It must test the control variable by comparing it to a maximum value. When the control variable reaches its maximum value, the loop terminates.
 3. It must update the control variable during each iteration. This is usually done by incrementing the variable.
+
+In Java, the for loop is ideal for writing count-controlled loops. It is specifically designed to initialize, test, and update a loop control variable.
+Here is the format of the for loop when used to repeat a single statement:
+```java
+for (Initialization; Test; Update)
+{
+    Statment;
+    Statment;
+    // Place as many statements here as necessay.
+}
+```
+The first line of the for loop is known as the *loop header*.
+After the key word for, there are three expressions inside the parentheses, separated by semicolons.
+The first expression is the *initialization expression*. It is normally used to initialize a control variable to its starting value.
+The second expression is the *test expression*. This is a boolean expression that controls the execution of the loop. As long as this expression is true, the body of the for loop will repeat.
+The for loop is a pretest loop, so it evaluates the test expression before each iteration.
+The third expression is the *update expression*. It executes at the end of each iteration.
+
+Here is an example of a simple for loop that prints "Hello" five times:
+```java
+int count
+
+for (count = 1; count <= 5; count++)
+    System.out.println("Hello");
+```
+count - Because this variable keeps a count of the number of iterations, it is often called a counter variable.
+It is also possible to use the control variable within the body of the loop.
+For example:
+```java
+for (number = 1; number <= 10; number++)
+    System.out.print(number + " ");
+
+// Output: 1 2 3 4 5 6 7 8 9 10
+```
+
+Be careful not to place a statement that modifies the control variable in the body of the for loop.
