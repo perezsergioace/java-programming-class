@@ -72,3 +72,9 @@ You should use the do-while loop when you want to make sure the loop executes at
 
 ## **4.5 The for Loop**
 The for loop is ideal for performing a known number of iterations.
+A loop that repeats a specific number of times is known as a count-controlled loop.
+
+A count-controlled loop must possess three elements:
+1. It must initialize a control variable to a starting value.
+2. It must test the control variable by comparing it to a maximum value. When the control variable reaches its maximum value, the loop terminates.
+3. It must update the control variable during each iteration. This is usually done by incrementing the variable.
