@@ -58,3 +58,17 @@ while (number <= 5); // This semicolon is an ERROR!
 }
 ```
 
+## **4.3 Using the while Loop for Input Validation**
+The while loop can be used to create input routines that repeat until acceptable data is entered.
+
+*Input validation* is the process of inspecting data given to a program by the user and determining whether it is valid.
+
+## **4.4 The do-while Loop**
+The do-while loop is a posttest loop, which means its boolean expression is tested after each iteration.
+The do-while loop must be terminated with a semicolon.
+The do-while loop is a posttest loop. This means it does not test its boolean expression until it has completed an iteration.
+As a result, the do-while loop always performs at least one iteration, even if the boolean expression is false to begin with.
+You should use the do-while loop when you want to make sure the loop executes at least once.
+
+## **4.5 The for Loop**
+The for loop is ideal for performing a known number of iterations.
