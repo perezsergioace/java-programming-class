@@ -152,3 +152,17 @@ When the user enters the sentinel value, the loop terminates.
 
 ## **4.7 Nested Loops**
 A loop that is inside another loop is called a nested loop.
+
+Nested loops are necessary when a task performs a repetitive operation and that task itself must be repeated.
+
+## **4.8 The break and continue Statements(Optional)**
+The break statement causes a loop to terminate early.
+The continue statement causes a loop to stop its current iteration and begin the next one.
+
+Although it is perfectly acceptable to use the break statement in a switch statement, it is considered taboo to use it in a loop.
+This is because it bypasses the normal condition that is required to terminate the loop, and it makes code difficult to understand and debug.
+For this reason, you should avoid using the break statement in a loop when possible.
+
+The continues statement should also be avoided.
+Like the break statement, it bypasses the loop's logic and makes the code difficult to understand and debug.
+
