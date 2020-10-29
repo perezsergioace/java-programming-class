@@ -137,3 +137,18 @@ for (x = 1, y = 1; x <= 5; x++)
 ```
 
 Don't try to connect multiple boolean expressions in the test expression, you must use the && or || operators.
+
+## **4.6 Running Totals and Sentinel Values**
+A running total is a sum of number that accumulates with each iteration of a loop.
+The variable use to keep the running total is called an accumulator.
+A sentinel is a value that signals when the end of a list of values has been reached.
+
+Set the accumulator variable to 0. This is a critical step.
+Each time the loop reads a number, it adds it to the accumulator.
+If the accumulator starts with any value other than 0, it will not contain the correct total when the loop finishes.
+
+A sentinel value is a special value that cannot be mistaken as a member of the list, and signals that there are no more values to be entered.
+When the user enters the sentinel value, the loop terminates.
+
+## **4.7 Nested Loops**
+A loop that is inside another loop is called a nested loop.
