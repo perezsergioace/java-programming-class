@@ -171,3 +171,8 @@ Although most repetitive algorithms can be written with any of the three types o
 * **The while loop**. The while loop is a pretest loop. It is ideal in situations where you do not want the loop to iterate if the condition is false from the beginning. It is also ideal if you want to use a sentinel value to terminate the loop.
 * **The do-while loop**. The do-while loop is a posttest loop. It is ideal in situations where you always want the loop to iterate at least once.
 * **The for loop**. The for loop is a pretest loop that has built-in expressions for initializing, testing, and updating. These expressions make it very convenient to use a loop control variable as a counter. The for loop is ideal in situations where the exact number of iterations is known.
+
+## **4.10 Introduction to File Input and Output**
+The Java API provides several classes that you can use for writing data to a file and reading data from a file.
+To write data to a file, you can use the PrintWriter class and, optionally, the FileWriter class.
+To read data from a file, you can use the Scanner class and the File class.
