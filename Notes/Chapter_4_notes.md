@@ -114,3 +114,26 @@ for (number = 1; number <= 10; number++)
 ```
 
 Be careful not to place a statement that modifies the control variable in the body of the for loop.
+
+Not only may the control variable be initialized in the initialization expression, but also may be declared there.
+```java
+for (int number = 1; number <= 10; number++)
+{
+    System.out.println(number + "\t\t" + number * number );
+}
+```
+In this loop, the number variable is both declared and initialized in the initialization expression.
+If the control variable is used only in the loop, it makes sense to declare it in the loop header. This makes the variable's purpose clearer.
+When a variable is declared in the initialization expression of a for loop, the scope of the variable is limited to the loop. This means you cannot access the variable in statements outside the loop. 
+
+It is possible to execute more than one statement in the initialization expression and the update expression.
+When using multiple statements in either of these expressions, simply separate the statements with commas.
+```java
+int x, y;
+for (x = 1, y = 1; x <= 5; x++)
+{
+    System.out.println(x + " plus " + y + " equals " + (x + y));
+}
+```
+
+Don't try to connect multiple boolean expressions in the test expression, you must use the && or || operators.
