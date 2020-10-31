@@ -176,3 +176,8 @@ Although most repetitive algorithms can be written with any of the three types o
 The Java API provides several classes that you can use for writing data to a file and reading data from a file.
 To write data to a file, you can use the PrintWriter class and, optionally, the FileWriter class.
 To read data from a file, you can use the Scanner class and the File class.
+
+To retain data between the times it runs, a program must have a way of saving the data.
+
+An input file is a file that a program reads data from. It is called an input file because the data stored in it serves as input to the program.
+An output file is a file that a program writes data to. It is called an output file because the program stores output in the file.
