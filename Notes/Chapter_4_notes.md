@@ -181,3 +181,97 @@ To retain data between the times it runs, a program must have a way of saving th
 
 An input file is a file that a program reads data from. It is called an input file because the data stored in it serves as input to the program.
 An output file is a file that a program writes data to. It is called an output file because the program stores output in the file.
+
+There are two types of files: text and binary.
+A text file contains data that has been encoded as text, using a scheme such as Unicode.
+Even if the file contains numbers, those numbers are stored in the file as a series of characters. As a result, the file may be opened and viewed in a text editor such as Notepad.
+A binary file contains data that has not been converted to text.
+
+The Java API provides a number of classes that you will use to work with files. To use these classes, you will place the following import statement near the top of the program. 
+```java
+import java.io.*;
+```
+
+To write data to a file create an instance of the PrintWriter class. The PrintWriter class allows you to open a file for writing.
+You pass the name of the file that you wish to open, as a string, to the PrintWriter class's constructor.
+```java
+PrintWriter output file = new PrintWriter("Student.txt");
+```
+
+You may also pass a reference to a String object as an argument to the PrintWriter constructor.
+```java
+String filename;
+filename = JOptionPane.showInputDialog("Enter the filename");
+PrintWriter outputFile = new PrintWriter(filename);
+```
+**Warning**: If the file that you are opening with the PrintWriter object already exists, it will be erased and an empty file by the same name will be created.
+
+You can write data to the file using the print and println methods.
+```java
+outputFile.println("Jim");
+```
+
+When the program is finished writing data to the file, it must close the file.
+To close the file use the PrintWriter class's close method.
+```java
+outputFile.close();
+```
+
+A buffer is a small "holding section" of memory.
+
+Once a file is closed, the connection between it and the PrintWriter object is removed. In order to perform further operations on the file, it must be opened again.
+
+A delimiter is an item that separates other items.
+
+Because we have not yet learned how to respond to exceptions, any method that uses a PrintWriter object must have a throws IOException clause in its header.
+
+Appending to a file means writing new data to the end of the data that already exists in the file.
+
+To append data to an existing file, you first create an instance of the FileWrite class.
+You pass two arguments to the FileWriter constructor: a string containing the name of the file, and the boolean variable true.
+Here is an example:
+```java
+FileWriter fwriter = new FileWriter("MyFriends.txt", true);
+```
+You still need to create a PrintWriter object so you can use the print and println methods to write to the file.
+```java
+FileWriter fwriter = new FileWriter("MyFriends.txt", true);
+PrintWriter outputFile = new PrintWriter(fwriter);
+```
+
+**Specifying the File Location**
+When you open a file you may specify its path along with its filename.
+
+**Reading Data from a file**
+You can also use the Scanner class to read input from a file. Instead of passing System.in to the Scanner class constructor, you pass a reference to a File object. Here is an example:
+```java
+File myFile = new File("Customers.txt");
+Scanner inputFile = new Scanner(myFile);
+```
+
+After you create a File object representing the file that you want to open, you can use the File class's **exists** method to determine whether file exists.
+The method returns true if the file exists, or false if the file does not exist.
+```java
+import java.util.Scanner;
+import java.io.*;
+
+/**
+ * This verson of the program confirms that the Numbers.txt file exists before opening it.
+ */
+
+public class FileSum2
+{
+    public sttic void main(String[] args) throws IOException
+    {
+        double sum = 0.0;
+
+        // Make sure the file exists.
+        File file = new File("Numbers.txt");
+        if (!file.exists())
+        {
+            System.out.println("The file Numbers.txt is not found.");
+            System.exit(0);
+        }
+    }
+}
+```
