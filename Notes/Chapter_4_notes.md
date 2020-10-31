@@ -275,3 +275,29 @@ public class FileSum2
     }
 }
 ```
+
+## **4.11 Generating Random Numbers with the Random Class**
+Random Numbers are used in a variety of applications.
+Java provides the Random class that you can use to generate random numbers.
+
+The class is part of the java.util package, so any program that uses it will need a n import statement such as:
+```java
+import java.util.Random;
+```
+
+You create an object from the Random class with a statement such as this:
+```java
+Random randomNumbers = new Random();
+```
+
+Once you have created a Random object, you can call its nextInt method to get a random integer number.
+```java
+// Declare an int variable.
+int number 
+
+// Create a Random object.
+Random randomNumbers = new Random();
+
+// Get a random integer and assign it to number.
+number = randomNumbers.nextInt();
+```
