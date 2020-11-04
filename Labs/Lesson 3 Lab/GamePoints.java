@@ -40,7 +40,14 @@ public class GamePoints
 
                         System.out.print("How many points did player 1 score? ");
                         playerOnePointsInput = keyboard.nextInt();
-                        playerOnePointsTotal += playerOnePointsInput;
+                        if (playerOnePointsInput < 0)
+                        {
+                            System.out.println("That is an invalid score.");
+                        }
+                        else
+                        {
+                            playerOnePointsTotal += playerOnePointsInput;
+                        }
                         break;
                     case 2:
                         System.out.println("two");
