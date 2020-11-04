@@ -16,40 +16,32 @@ public class GamePoints
         // Create Scanner object for keyboard input.
         Scanner keyboard = new Scanner(System.in);
 
-        // Display general instrucitons.
+        // Get input from user.
         System.out.print("Which player (1, 2, 3, 4, 5; -1 to quit): ");
         input = keyboard.nextInt();
 
-        if (input == 1)
+        while (input != -1)
         {
-            System.out.printf("How many points did player %d score? ", input);
-            playerOnePoints = keyboard.nextInt();
-            System.out.println(playerOnePoints);
+            switch (input)
+            {
+                case 1:
+                    System.out.println("one");
+                    break;
+                case 2:
+                    System.out.println("two");
+                    break;
+                case 3:
+                    System.out.println("three");
+                    break;
+                case 4:
+                    System.out.println("four");
+                    break;
+                case 5:
+                    System.out.println("five");
+                    break;
+            }
+            System.out.print("Which player (1, 2, 3, 4, 5; -1 to quit): ");
+            input = keyboard.nextInt();
         }
-        else if (input == 2)
-        {
-            System.out.printf("How many points did player %d score? ", input);
-            playerTwoPoints = keyboard.nextInt();
-            System.out.println(playerTwoPoints);
-        }
-        else if (input == 3)
-        {
-            System.out.printf("How many points did player %d score? ", input);
-            playerThreePoints = keyboard.nextInt();
-            System.out.println(playerThreePoints);
-        }
-        else if (input == 4)
-        {
-            System.out.printf("How many points did player %d score? ", input);
-            playerFourPoints = keyboard.nextInt();
-            System.out.println(playerFourPoints);
-        }
-        else if (input == 5)
-        {
-            System.out.printf("How many points did player %d score? ", input);
-            playerFivePoints = keyboard.nextInt();
-            System.out.println(playerFivePoints);
-        }
-        
     }
 }
