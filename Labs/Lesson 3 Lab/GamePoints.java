@@ -1,9 +1,7 @@
 import java.util.Scanner;
 
-public class GamePoints
-{
-    public static void main(String[] args)
-    {
+public class GamePoints {
+    public static void main(String[] args) {
         // Create variables for each player and the team.
         int playerOnePointsInput;
         int playerOnePointsTotal = 0;
@@ -15,7 +13,7 @@ public class GamePoints
         int playerFourPointsTotal = 0;
         int playerFivePointsInput;
         int playerFivePointsTotal = 0;
-        // int teamTotalPoints;
+        int teamTotalPoints;
         int input;
 
         // Create Scanner object for keyboard input.
@@ -25,27 +23,19 @@ public class GamePoints
         System.out.print("Which player (1, 2, 3, 4, 5; -1 to quit): ");
         input = keyboard.nextInt();
 
-        if (input == -1)
-        {
+        if (input == -1) {
             System.out.println("No scores were entered.");
-        }
-        else
-        {
-            while (input != -1)
-            {
-                switch (input)
-                {
+        } else {
+            while (input != -1) {
+                switch (input) {
                     case 1:
                         System.out.println("one");
 
                         System.out.print("How many points did player 1 score? ");
                         playerOnePointsInput = keyboard.nextInt();
-                        if (playerOnePointsInput < 0)
-                        {
+                        if (playerOnePointsInput < 0) {
                             System.out.println("That is an invalid score.");
-                        }
-                        else
-                        {
+                        } else {
                             playerOnePointsTotal += playerOnePointsInput;
                         }
                         break;
@@ -54,12 +44,9 @@ public class GamePoints
 
                         System.out.print("How many points did player 2 score? ");
                         playerTwoPointsInput = keyboard.nextInt();
-                        if (playerTwoPointsInput < 0)
-                        {
+                        if (playerTwoPointsInput < 0) {
                             System.out.println("That is an invalid score.");
-                        }
-                        else
-                        {
+                        } else {
                             playerTwoPointsTotal += playerTwoPointsInput;
                         }
                         break;
@@ -67,12 +54,9 @@ public class GamePoints
                         System.out.println("three");
                         System.out.print("How many points did player 3 score? ");
                         playerThreePointsInput = keyboard.nextInt();
-                        if (playerThreePointsInput < 0)
-                        {
+                        if (playerThreePointsInput < 0) {
                             System.out.println("That is an invalid score.");
-                        }
-                        else
-                        {
+                        } else {
                             playerThreePointsTotal += playerThreePointsInput;
                         }
                         break;
@@ -80,12 +64,9 @@ public class GamePoints
                         System.out.println("four");
                         System.out.print("How many points did player 4 score? ");
                         playerFourPointsInput = keyboard.nextInt();
-                        if (playerFourPointsInput < 0)
-                        {
+                        if (playerFourPointsInput < 0) {
                             System.out.println("That is an invalid score.");
-                        }
-                        else
-                        {
+                        } else {
                             playerFourPointsTotal += playerFourPointsInput;
                         }
                         break;
@@ -93,12 +74,9 @@ public class GamePoints
                         System.out.println("five");
                         System.out.print("How many points did player 5 score? ");
                         playerFivePointsInput = keyboard.nextInt();
-                        if (playerFivePointsInput < 0)
-                        {
+                        if (playerFivePointsInput < 0) {
                             System.out.println("That is an invalid score.");
-                        }
-                        else
-                        {
+                        } else {
                             playerFivePointsTotal += playerFivePointsInput;
                         }
                         break;
@@ -109,8 +87,11 @@ public class GamePoints
                 System.out.print("Which player (1, 2, 3, 4, 5; -1 to quit): ");
                 input = keyboard.nextInt();
 
-                if (input == -1)
-                {
+                teamTotalPoints = playerOnePointsTotal + playerTwoPointsTotal + playerThreePointsTotal
+                        + playerFourPointsTotal + playerFivePointsTotal;
+
+                if (input == -1) {
+                    System.out.println("Team Total - " + teamTotalPoints);
                     System.out.println("Player 1 points - " + playerOnePointsTotal);
                     System.out.println("Player 2 points - " + playerTwoPointsTotal);
                     System.out.println("Player 3 points - " + playerThreePointsTotal);
