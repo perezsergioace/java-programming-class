@@ -15,6 +15,7 @@ public class GamePoints {
         int playerFivePointsTotal = 0;
         int largest = 0;
         int teamTotalPoints = 0;
+        String starPlayer = "";
         int input;
 
         // Create Scanner object for keyboard input.
@@ -86,20 +87,26 @@ public class GamePoints {
 
                 if (largest < playerOnePointsTotal) {
                     largest = playerOnePointsTotal;
+                    starPlayer = "Player 1";
                 } else if (largest < playerTwoPointsTotal) {
                     largest = playerTwoPointsTotal;
+                    starPlayer = "Player 2";
                 } else if (largest < playerThreePointsTotal) {
                     largest = playerThreePointsTotal;
+                    starPlayer = "Player 3";
                 } else if (largest < playerFourPointsTotal) {
                     largest = playerFourPointsTotal;
+                    starPlayer = "Player 4";
                 } else if (largest < playerFivePointsTotal) {
                     largest = playerFivePointsTotal;
+                    starPlayer = "Player 5";
                 }
 
                 if (input == -1) {
                     if (teamTotalPoints > 0) {
                         System.out.println("Team Total - " + teamTotalPoints);
                         System.out.println("High Score - " + largest);
+                        System.out.println("Star Player - " + starPlayer);
                         System.out.println("Player 1 points - " + playerOnePointsTotal);
                         System.out.println("Player 2 points - " + playerTwoPointsTotal);
                         System.out.println("Player 3 points - " + playerThreePointsTotal);
