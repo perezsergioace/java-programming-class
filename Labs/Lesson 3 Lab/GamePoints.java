@@ -13,7 +13,9 @@ public class GamePoints {
         int playerFourPointsTotal = 0;
         int playerFivePointsInput;
         int playerFivePointsTotal = 0;
-        int teamTotalPoints;
+        int counter = 1;
+        int largest = 0;
+        int teamTotalPoints = 0;
         int input;
 
         // Create Scanner object for keyboard input.
@@ -90,13 +92,31 @@ public class GamePoints {
                 teamTotalPoints = playerOnePointsTotal + playerTwoPointsTotal + playerThreePointsTotal
                         + playerFourPointsTotal + playerFivePointsTotal;
 
+                if (largest < playerOnePointsTotal) {
+                    largest = playerOnePointsTotal;
+                } else if (largest < playerTwoPointsTotal) {
+                    largest = playerTwoPointsTotal;
+                } else if (largest < playerThreePointsTotal) {
+                    largest = playerThreePointsTotal;
+                } else if (largest < playerFourPointsTotal) {
+                    largest = playerFourPointsTotal;
+                } else if (largest < playerFivePointsTotal) {
+                    largest = playerFivePointsTotal;
+                }
+
                 if (input == -1) {
-                    System.out.println("Team Total - " + teamTotalPoints);
-                    System.out.println("Player 1 points - " + playerOnePointsTotal);
-                    System.out.println("Player 2 points - " + playerTwoPointsTotal);
-                    System.out.println("Player 3 points - " + playerThreePointsTotal);
-                    System.out.println("Player 4 points - " + playerFourPointsTotal);
-                    System.out.println("Player 5 points - " + playerFivePointsTotal);
+                    if (teamTotalPoints > 0) {
+                        System.out.println("Team Total - " + teamTotalPoints);
+                        System.out.println("High Score - " + largest);
+                        System.out.println("Player 1 points - " + playerOnePointsTotal);
+                        System.out.println("Player 2 points - " + playerTwoPointsTotal);
+                        System.out.println("Player 3 points - " + playerThreePointsTotal);
+                        System.out.println("Player 4 points - " + playerFourPointsTotal);
+                        System.out.println("Player 5 points - " + playerFivePointsTotal);
+                    }
+                    else {
+                        System.out.println("No scores were entered.");
+                    }
                 }
             }
         }
