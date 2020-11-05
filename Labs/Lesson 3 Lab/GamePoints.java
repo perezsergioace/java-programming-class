@@ -13,7 +13,6 @@ public class GamePoints {
         int playerFourPointsTotal = 0;
         int playerFivePointsInput;
         int playerFivePointsTotal = 0;
-        int counter = 1;
         int largest = 0;
         int teamTotalPoints = 0;
         int input;
@@ -113,8 +112,7 @@ public class GamePoints {
                         System.out.println("Player 3 points - " + playerThreePointsTotal);
                         System.out.println("Player 4 points - " + playerFourPointsTotal);
                         System.out.println("Player 5 points - " + playerFivePointsTotal);
-                    }
-                    else {
+                    } else {
                         System.out.println("No scores were entered.");
                     }
                 }
