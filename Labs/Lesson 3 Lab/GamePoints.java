@@ -30,8 +30,6 @@ public class GamePoints {
             while (input != -1) {
                 switch (input) {
                     case 1:
-                        System.out.println("one");
-
                         System.out.print("How many points did player 1 score? ");
                         playerOnePointsInput = keyboard.nextInt();
                         if (playerOnePointsInput < 0) {
@@ -41,8 +39,6 @@ public class GamePoints {
                         }
                         break;
                     case 2:
-                        System.out.println("two");
-
                         System.out.print("How many points did player 2 score? ");
                         playerTwoPointsInput = keyboard.nextInt();
                         if (playerTwoPointsInput < 0) {
@@ -52,7 +48,6 @@ public class GamePoints {
                         }
                         break;
                     case 3:
-                        System.out.println("three");
                         System.out.print("How many points did player 3 score? ");
                         playerThreePointsInput = keyboard.nextInt();
                         if (playerThreePointsInput < 0) {
@@ -62,7 +57,6 @@ public class GamePoints {
                         }
                         break;
                     case 4:
-                        System.out.println("four");
                         System.out.print("How many points did player 4 score? ");
                         playerFourPointsInput = keyboard.nextInt();
                         if (playerFourPointsInput < 0) {
@@ -72,7 +66,6 @@ public class GamePoints {
                         }
                         break;
                     case 5:
-                        System.out.println("five");
                         System.out.print("How many points did player 5 score? ");
                         playerFivePointsInput = keyboard.nextInt();
                         if (playerFivePointsInput < 0) {
