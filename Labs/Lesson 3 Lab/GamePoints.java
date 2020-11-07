@@ -23,6 +23,12 @@ public class GamePoints {
         int playerFivePointsTotal = 0;
         double playerFivePercentage;
 
+        int playerOneNumber = 1;
+        int playerTwoNumber = 2;
+        int playerThreeNumber = 3;
+        int playerFourNumber = 4;
+        int playerFiveNumber = 5;
+
         int largest = 0;
         int teamTotalPoints = 0;
         String starPlayer = "";
@@ -136,24 +142,21 @@ public class GamePoints {
                 if (input == -1) {
                     if (teamTotalPoints > 0) {
                         // Display results to the user
-                        System.out.println("Team Total - " + teamTotalPoints);
-                        System.out.println("High Score - " + largest);
-                        System.out.println("Star Player - " + starPlayer);
+                        System.out.println("Team Total      " + teamTotalPoints);
+                        System.out.println("High Score      " + largest);
+                        System.out.println("Star Player     " + starPlayer);
+                        System.out.println("Player          Points              % of Total");
 
-                        System.out.println("Player 1 points - " + playerOnePointsTotal);
-                        System.out.printf("%.2f%%\n", playerOnePercentage);
-
-                        System.out.println("Player 2 points - " + playerTwoPointsTotal);
-                        System.out.printf("%.2f%%\n", playerTwoPercentage);
-
-                        System.out.println("Player 3 points - " + playerThreePointsTotal);
-                        System.out.printf("%.2f%%\n", playerThreePercentage);
-
-                        System.out.println("Player 4 points - " + playerFourPointsTotal);
-                        System.out.printf("%.2f%%\n", playerFourPercentage);
-
-                        System.out.println("Player 5 points - " + playerFivePointsTotal);
-                        System.out.printf("%.2f%%\n", playerFivePercentage);
+                        System.out.printf(playerOneNumber + "\t\t" + "%-20d" + "%-20.2f\n", playerOnePointsTotal,
+                                playerOnePercentage);
+                        System.out.printf(playerTwoNumber + "\t\t" + "%-20d" + "%-20.2f\n", playerTwoPointsTotal,
+                                playerTwoPercentage);
+                        System.out.printf(playerThreeNumber + "\t\t" + "%-20d" + "%-20.2f\n", playerThreePointsTotal,
+                                playerThreePercentage);
+                        System.out.printf(playerFourNumber + "\t\t" + "%-20d" + "%-20.2f\n", playerFourPointsTotal,
+                                playerFourPercentage);
+                        System.out.printf(playerFiveNumber + "\t\t" + "%-20d" + "%-20.2f\n", playerFivePointsTotal,
+                                playerFivePercentage);
                     } else {
                         // Print a error message when a user does not enter any scored for the players
                         System.out.println("No scores were entered.");
