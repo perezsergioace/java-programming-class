@@ -38,3 +38,58 @@ Java programs can have other methods as well.
 
 A method executes when it is called. The **main** method is automatically called when a program starts, but other methods are executed by method call statements. 
 Method call statements may be used in control structures like loops, if statements, and switch statements.
+
+Methods can also be called in layered fashion. In other words, method A can call method B, which can then call method C. 
+
+You should always document a method by writing comments that appear just before the method's definition.
+The comments should provide a brief explanation of the method's purpose.
+
+## **5.2 - Passing Arguments to a Method**
+A method may be written so it accepts arguments.
+Data can then be passed into the method when it is called.
+
+Values that are sent into a method are called arguments.
+By using parameter variables, you can design your own methods that accept data this way.
+A **parameter variable**, sometimes simply referred to as a **parameter**, is a special variable that holds a value being passed into a method.
+```java
+public static void displayValue(int num)
+{
+	System.out.println("The value is " + num);
+}
+
+displayValue(5);
+
+Output: The value is 5
+```
+
+You may also pass the contents of variables and the values of expressions as arguments.
+```java
+displayValue(x);
+displayValue(x * 4);
+displayValue(Integer.parseInt("700"));
+```
+
+**Warning** - When passing a variable as an argument, simply write the variable name inside the parentheses of the method call. Do not write the data type of the argument variable in the method call.
+```java
+displayValue(int x);	// Error!
+// The method call should appear as follows:
+displayValue(x);	// Correct
+```
+
+Some call the arguments *actual parameters* and call the parameters *formal parameters*.
+Others use the terms *actual argument* and *formal argument*.
+
+When passing an argument to a method, be sure that the argument's data type is compatible with the parameter variable's data type.
+Java will automatically perform a widening conversion if the argument's data type is ranked lower than the parameter variable's data type.
+However, Java will not automatically convert an argument to a lower-ranking data type. This means that a long, float, or double value cannot be passed to a method that has an int parameter variable.
+
+Often it is useful to pass more than one argument to a method. Here is a method that accepts two arguments.
+```java
+public static void showSum(double num1, double num2)
+{
+	double sum;	// To hold the sum
+	
+	sum = num1 + num2;
+	System.out.println("The sum is " + sum);
+}
+```
