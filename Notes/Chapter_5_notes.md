@@ -38,4 +38,3 @@ Java programs can have other methods as well.
 
 A method executes when it is called. The **main** method is automatically called when a program starts, but other methods are executed by method call statements. 
 Method call statements may be used in control structures like loops, if statements, and switch statements.
-
