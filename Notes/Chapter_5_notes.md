@@ -92,4 +92,60 @@ public static void showSum(double num1, double num2)
 	sum = num1 + num2;
 	System.out.println("The sum is " + sum);
 }
+
+showSum(5, 10);
 ```
+Notice that tow parameter variables, num1 and num2, are declared inside the parentheses in the method header. This is often referred to as a **parameter list**.
+
+**Warning** - Each parameter variable in a parameter list must have a data type listed before its name. A data type for both the parameter variables must be listed.
+
+You can also write methods that accept references to objects as arguments.
+
+String objects in Java are immutable, which means that they cannot be changed.
+
+## **5.3 - More about Local Variables**
+A local variable is declared inside a method and it not accessible to statements outside the method.
+Different methods can have local variables with the same names because the methods cannot see each other's local variables.
+
+Because a method's local variables are hidden from other methods, the other methods may have their own local variables with the same name.
+
+A method's local variables exist only, while the method is executing.
+This is known as the **lifetime** of a local variable.
+When the method begins, its local variables and its parameter variables are created in memory, and when the method ends, the local variables and parameter variables are destroyed.
+This means that any value stored in a local variable is lost between calls to the method in which the variable is declared.
+
+Methods can be written like this:
+```java
+public static void showSum(double num1, double num2)
+{
+	double sum;	// to hold the sum
+	
+	sum = num1 + num2;
+	System.out.println("The sum is " + sum);
+}
+```
+
+But can also be written like this:
+```java
+public static void showSum(double num1, double num2)
+{
+	double sum = num1 + num2;
+	System.out.println("The sum is " + sum);
+}
+```
+
+Local variables are not automatically initialized with a default value.
+They must be given a value before they can be used.
+If you attempt to use a local variable before it has been given a value, a compiler error will result.
+```java
+public static void myMethod()
+{
+	int x;
+	System.out.println(x);	// Error! x has no value.
+}
+```
+
+## **5.4 - Returning a Value from a Method**
+A method may send a value back to the statement that called the method.
+
+Methods that return a value are appropriately know as **value-returning methods**
