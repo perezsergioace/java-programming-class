@@ -172,3 +172,9 @@ It causes the method to end execution and it returns a value to the statement th
 
 **Note**: The **return** statement's expression must be of the same data type as the return type specified in the method header, or compatible with it. Otherwise, a compiler error will occur. Java will automatically widen the value of the return expression, if necessary, but it will not automatically narrow it.
 
+## **5.5 - Problem Solving with Methods**
+A large, complex problem can be solved a piece at a time by methods.
+
+The process of breaking down a problem into smaller pieces is called **functional decomposition**.
+
+If a method calls another method that has a **throws** clause in its header, then the calling method should have the same **throws** clause.
