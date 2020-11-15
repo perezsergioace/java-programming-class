@@ -149,3 +149,26 @@ public static void myMethod()
 A method may send a value back to the statement that called the method.
 
 Methods that return a value are appropriately know as **value-returning methods**
+
+When writing a value-returning method, one must decide what type of value the method will return.
+This is because you must specify that data type of the return value in the method header.
+
+Recall that a **void** method, which doesn not return a value, uses the key word void as its return type in the method header.
+
+A value-returning method will use int, double, boolean, or any other valid data type in its header.
+Here is an example of a method that returns an int value:
+```java
+public static int sum(int num1, int mum2)
+{
+	int result;
+	
+	result = num1 + num2;
+	return result;
+}
+```
+
+You must have a **return** statement in a value-returning method.
+It causes the method to end execution and it returns a value to the statement that called the method.
+
+**Note**: The **return** statement's expression must be of the same data type as the return type specified in the method header, or compatible with it. Otherwise, a compiler error will occur. Java will automatically widen the value of the return expression, if necessary, but it will not automatically narrow it.
+
