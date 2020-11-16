@@ -107,7 +107,6 @@ public class BirthWeightData {
 			System.out.printf("Very LBW\t\t%-20.2f%-20d%-20.2f\n", veryLowBirthWeightAverage, veryLowBirthWeightInputTotal, veryLowBirthWeightPercentage);
 			System.out.printf("Low Birth Weight\t%-20.2f%-20d%-20.2f\n", lowBirthWeightAverage, lowBirthWeightInputTotal, lowBirthWeightPercentage);
 			System.out.printf("Normal Weight\t\t%-20.2f%-20d%-20.2f\n", normalBirthWeightAverage, normalBirthWeightInputTotal, normalBirthWeightPercentage);
-
 		}		
 		else {
 			System.out.println("No weights were entered.");
