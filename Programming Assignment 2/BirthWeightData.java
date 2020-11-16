@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+/**
+ * This program obtains birth weight in grams and outputs the data and categorizes the data by weight category.
+ */
+
 public class BirthWeightData {
 	public static void main(String[] args) {
 		// Initialize variables
