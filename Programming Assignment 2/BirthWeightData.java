@@ -102,23 +102,15 @@ public class BirthWeightData {
 		
 		// Display output messages.
 		if (totalWeights != 0) {
-			System.out.println("Extremely Low Birth Weight - Number: " + extremelyLowBirthWeightInputTotal);
-			System.out.println("Very Low Birth Weight - Number: " + veryLowBirthWeightInputTotal);
-			System.out.println("Low Birth Weight - Number: " + lowBirthWeightInputTotal);
-			System.out.println("Normal Low Birth Weight - Number: " + normalBirthWeightInputTotal);
-			
-			System.out.println("Extremely Low Birth Weight Average: " + extremelyLowBirthWeightAverage);
-			System.out.println("Very Low Birth Weight Average: " + veryLowBirthWeightAverage);
-			System.out.println("Low Birth Weight Average: " + lowBirthWeightAverage);
-			System.out.println("Normal Birth Weight Average: " + normalBirthWeightAverage);
+			System.out.println("Category\t\tAverage\t\t    Number\t\t% of Total");
+			System.out.printf("Extremely LBW\t\t%-20.2f%-20d%-20.2f\n", extremelyLowBirthWeightAverage, extremelyLowBirthWeightInputTotal, extremelyLowBirthWeightPercentage);
+			System.out.printf("Very LBW\t\t%-20.2f%-20d%-20.2f\n", veryLowBirthWeightAverage, veryLowBirthWeightInputTotal, veryLowBirthWeightPercentage);
+			System.out.printf("Low Birth Weight\t%-20.2f%-20d%-20.2f\n", lowBirthWeightAverage, lowBirthWeightInputTotal, lowBirthWeightPercentage);
+			System.out.printf("Normal Weight\t\t%-20.2f%-20d%-20.2f\n", normalBirthWeightAverage, normalBirthWeightInputTotal, normalBirthWeightPercentage);
 
-			System.out.println("% of Total - Extremely Low Birth Weight: " + extremelyLowBirthWeightPercentage);
-			System.out.println("% of Total - Very Low Birth Weight: " + veryLowBirthWeightPercentage);
-			System.out.println("% of Total - Low Birth Weight: " + lowBirthWeightPercentage);
-			System.out.println("% of Total - Normal Low Birth Weight: " + normalBirthWeightPercentage);
 		}		
 		else {
-			System.out.println("No Weights were entered.");
+			System.out.println("No weights were entered.");
 		}
 	}
 }
