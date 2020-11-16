@@ -35,33 +35,42 @@ public class BirthWeightData {
 		System.out.print("Please enter the next birth weight, -1 when done: ");
 		input = keyboard.nextDouble();
 
-		// Accumulate the weight data from user until -1 is entered.
+		// Accumulate the weight data from the user until -1 is entered.
 		while (input != -1) {
+			// Check to see if the user enters 0 as an input, if so display an error message.
 			if (input <= 0) {
 				System.out.println("That is an invalid weight.");
 			}
 			else {
+				// if the input is in the range of extremely low birth weight, add it to the accumulator. Also add to the Input total accumulator.
 				if (input >= 1 && input <= 999) {
 					extremelyLowBirthWeightTotal += input;
 					extremelyLowBirthWeightInputTotal++;
 				}
+				// if the input is in the range of very low birth weight, add it to the accumulator. Also add to the Input total accumulator.
 				else if (input >= 1000 && input <= 1499) {
 					veryLowBirthWeightTotal += input;
 					veryLowBirthWeightInputTotal++;
 				}
+				// if the input is in the range of low birth weight, add it to the accumulator. Also add to the Input total accumulator.
 				else if (input >= 1500 && input <= 2499) {
 					lowBirthWeightTotal += input;
 					lowBirthWeightInputTotal++;
 				}
+				// if the input is in the range of normal birth weight, add it to the accumulator. Also add to the Input total accumulator.
 				else if (input >= 2500) {
 					normalBirthWeightTotal += input;
 					normalBirthWeightInputTotal++;
 				}
 			}
 
+			// Add each weights total together.
 			totalWeights = extremelyLowBirthWeightTotal + veryLowBirthWeightTotal + lowBirthWeightInputTotal + normalBirthWeightTotal;
+			// Add each input total to the totalWeightInputs accumulator.
 			totalWeightInputs = extremelyLowBirthWeightInputTotal + veryLowBirthWeightInputTotal + lowBirthWeightInputTotal + normalBirthWeightInputTotal; 
 
+			// check if any of the weights total is 0, if so make each weights average equal to 0.
+			// getting a NaN(Not a Number) return value when dividing 0 by 0.
 			if (extremelyLowBirthWeightTotal == 0) {
 				extremelyLowBirthWeightAverage = 0;
 			}
@@ -90,6 +99,7 @@ public class BirthWeightData {
 				normalBirthWeightAverage = normalBirthWeightTotal / normalBirthWeightInputTotal; 
 			}
 
+			// Calculate the percentage of each weight category.
 			extremelyLowBirthWeightPercentage = (extremelyLowBirthWeightInputTotal / totalWeightInputs) * 100;
 			veryLowBirthWeightPercentage = (veryLowBirthWeightInputTotal / totalWeightInputs) * 100;
 			lowBirthWeightPercentage = (lowBirthWeightInputTotal / totalWeightInputs) * 100;
@@ -108,6 +118,7 @@ public class BirthWeightData {
 			System.out.printf("Low Birth Weight\t%-20.2f%-20d%-20.2f\n", lowBirthWeightAverage, lowBirthWeightInputTotal, lowBirthWeightPercentage);
 			System.out.printf("Normal Weight\t\t%-20.2f%-20d%-20.2f\n", normalBirthWeightAverage, normalBirthWeightInputTotal, normalBirthWeightPercentage);
 		}		
+		// Display an error message if no weights were entered.
 		else {
 			System.out.println("No weights were entered.");
 		}
