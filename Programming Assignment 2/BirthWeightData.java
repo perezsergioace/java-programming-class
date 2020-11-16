@@ -8,18 +8,22 @@ public class BirthWeightData {
 		double extremelyLowBirthWeightTotal = 0;
 		int extremelyLowBirthWeightInputTotal = 0;
 		double extremelyLowBirthWeightAverage = 0;
+		double extremelyLowBirthWeightPercentage = 0;
 
 		double veryLowBirthWeightTotal = 0;
 		int veryLowBirthWeightInputTotal = 0;
 		double veryLowBirthWeightAverage = 0;
+		double veryLowBirthWeightPercentage = 0;
 
 		double lowBirthWeightTotal = 0;
 		int lowBirthWeightInputTotal = 0;
 		double lowBirthWeightAverage = 0;
+		double lowBirthWeightPercentage = 0;
 
 		double normalBirthWeightTotal = 0;
 		int normalBirthWeightInputTotal = 0;
 		double normalBirthWeightAverage = 0;
+		double normalBirthWeightPercentage = 0;
 
 		double totalWeights = 0;
 		double totalWeightInputs = 0;
@@ -85,6 +89,11 @@ public class BirthWeightData {
 			else {
 				normalBirthWeightAverage = normalBirthWeightTotal / normalBirthWeightInputTotal; 
 			}
+
+			extremelyLowBirthWeightPercentage = (extremelyLowBirthWeightInputTotal / totalWeightInputs) * 100;
+			veryLowBirthWeightPercentage = (veryLowBirthWeightInputTotal / totalWeightInputs) * 100;
+			lowBirthWeightPercentage = (lowBirthWeightInputTotal / totalWeightInputs) * 100;
+			normalBirthWeightPercentage = (normalBirthWeightInputTotal / totalWeightInputs) * 100;
 			
 			// Get the next weight data
 			System.out.print("Please enter the next birth weight, -1 when done: ");
@@ -102,6 +111,11 @@ public class BirthWeightData {
 			System.out.println("Very Low Birth Weight Average: " + veryLowBirthWeightAverage);
 			System.out.println("Low Birth Weight Average: " + lowBirthWeightAverage);
 			System.out.println("Normal Birth Weight Average: " + normalBirthWeightAverage);
+
+			System.out.println("% of Total - Extremely Low Birth Weight: " + extremelyLowBirthWeightPercentage);
+			System.out.println("% of Total - Very Low Birth Weight: " + veryLowBirthWeightPercentage);
+			System.out.println("% of Total - Low Birth Weight: " + lowBirthWeightPercentage);
+			System.out.println("% of Total - Normal Low Birth Weight: " + normalBirthWeightPercentage);
 		}		
 		else {
 			System.out.println("No Weights were entered.");
