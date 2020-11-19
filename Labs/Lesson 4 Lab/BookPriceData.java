@@ -40,11 +40,17 @@ public class BookPriceData
 				// Read lines from the file until no more are left.
 				while (inputFile.hasNext())
 				{
+					if (inputFile.hasNext("BestBookDeals") || inputFile.hasNext("UsedTextbooksRUs") || inputFile.hasNext("JohnsScienceBooks") || inputFile.hasNext("ValueBookorama") || inputFile.hasNext("A1BookSellers") || inputFile.hasNext("AlreadyUnderlined") || inputFile.hasNext("QualityBooks") || inputFile.hasNext("BooksBooksBooks")){
+						// System.out.println("Is this working");
+						System.out.println(inputFile.nextLine());
+					}
+
+					//System.out.println(inputFile);
 					// Read the next line of data
 					String bookDataLine = inputFile.nextLine();
 
 					// Display the last line of book data
-					System.out.println(bookDataLine);
+					// System.out.println(bookDataLine);
 				}
 
 				// Close the file.
