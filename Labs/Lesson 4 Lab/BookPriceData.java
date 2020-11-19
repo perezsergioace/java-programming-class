@@ -29,19 +29,27 @@ public class BookPriceData
 			// Open the file.
 			Scanner inputFile = new Scanner(file);
 
-			// Read lines from the file until no more are left.
-			while (inputFile.hasNext())
+			// Check if the file is empty
+			if (!inputFile.hasNext())
 			{
-				// Read the next line of data
-				String bookDataLine = inputFile.nextLine();
-
-				// Display the last line of book data
-				System.out.println(bookDataLine);
+				System.out.printf("%s is empty", file);
 			}
+			// else, go to the while loop.
+			else
+			{
+				// Read lines from the file until no more are left.
+				while (inputFile.hasNext())
+				{
+					// Read the next line of data
+					String bookDataLine = inputFile.nextLine();
 
-			// Close the file.
-			inputFile.close();
+					// Display the last line of book data
+					System.out.println(bookDataLine);
+				}
 
+				// Close the file.
+				inputFile.close();
+			}
 		}
 	}
 }
