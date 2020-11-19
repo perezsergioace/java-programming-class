@@ -45,6 +45,7 @@ public class BookPriceData
 						System.out.println(inputFile.nextLine());
 					}
 
+
 					//System.out.println(inputFile);
 					// Read the next line of data
 					String bookDataLine = inputFile.nextLine();
