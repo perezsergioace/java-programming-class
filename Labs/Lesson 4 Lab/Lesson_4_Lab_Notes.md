@@ -12,14 +12,14 @@ If it exists and contains text, it might contain the title and base price of a n
 * Assume that each record, if present, is complete.
 * Assume that the correct data type for all data is in the file.
 
-Notes for self: 
+## **Notes for self:**
 * Check/validate if the file exists. 
 * Check/validate if the file contains any text. 
 
-Output:
+## **Output:**
 Display the **title** of the book and a **table** that **includes** a **header** and an output line for **each record** from the file(seller, shipping, quality) which is the **seller**, the **quality** of the book, the **cost** of the book, and the **cost** of the book **plus shipping**.
 
-Interface:
+## **Interface:**
 The program should prompt for the name of the input file using the following prompt:
 ```java
 System.out.print("What is the name of file?");
@@ -45,6 +45,7 @@ For a file that contains a header plus seller records, output should be formatte
 * The seller column should have a width of 30 characters.
 * All other columns have a width of 20 characters.
 
+## **Methods needed for assignment**
 For this program, you must write (and use) the following two methods:
 > calculateCost
 > * calculateCost takes two parameters - the base cost of the book(double), and the quality(int)
