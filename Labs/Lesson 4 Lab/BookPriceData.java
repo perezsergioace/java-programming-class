@@ -51,26 +51,26 @@ public class BookPriceData {
 
 						// Get shipping cost from the file
 						if (inputFile.hasNextDouble()) {
-							// double shippingCost = inputFile.nextDouble();
+							double shippingCost = inputFile.nextDouble();
 							// System.out.println(shippingCost);
 
 							if (inputFile.hasNextInt()) {
 								int qualityOfBook = inputFile.nextInt();
 
 								if (qualityOfBook == 1) {
-									System.out.printf("%-30s%-20s%-20.2f\n", bookSellerName, getQualityString(qualityOfBook), calculateCost(20.99, qualityOfBook));
+									System.out.printf("%-30s%-20s%-20.2f%-20.2f\n", bookSellerName, getQualityString(qualityOfBook), calculateCost(20.99, qualityOfBook), calculateCostAndShipping(calculateCost(20.99, qualityOfBook), qualityOfBook, shippingCost));
 								}
 								else if (qualityOfBook == 2) {
-									System.out.printf("%-30s%-20s%-20.2f\n", bookSellerName, getQualityString(qualityOfBook), calculateCost(20.99, qualityOfBook));
+									System.out.printf("%-30s%-20s%-20.2f%-20.2f\n", bookSellerName, getQualityString(qualityOfBook), calculateCost(20.99, qualityOfBook), calculateCostAndShipping(calculateCost(20.99, qualityOfBook), qualityOfBook, shippingCost));
 								}
 								else if (qualityOfBook == 3) {
-									System.out.printf("%-30s%-20s%-20.2f\n", bookSellerName, getQualityString(qualityOfBook), calculateCost(20.99, qualityOfBook));
+									System.out.printf("%-30s%-20s%-20.2f%-20.2f\n", bookSellerName, getQualityString(qualityOfBook), calculateCost(20.99, qualityOfBook), calculateCostAndShipping(calculateCost(20.99, qualityOfBook), qualityOfBook, shippingCost));
 								}
 								else if (qualityOfBook == 4) {
-									System.out.printf("%-30s%-20s%-20.2f\n", bookSellerName, getQualityString(qualityOfBook), calculateCost(20.99, qualityOfBook));
+									System.out.printf("%-30s%-20s%-20.2f%-20.2f\n", bookSellerName, getQualityString(qualityOfBook), calculateCost(20.99, qualityOfBook), calculateCostAndShipping(calculateCost(20.99, qualityOfBook), qualityOfBook, shippingCost));
 								}
 								else if (qualityOfBook == 5) {
-									System.out.printf("%-30s%-20s%-20.2f\n", bookSellerName, getQualityString(qualityOfBook), calculateCost(20.99, qualityOfBook));
+									System.out.printf("%-30s%-20s%-20.2f%-20.2f\n", bookSellerName, getQualityString(qualityOfBook), calculateCost(20.99, qualityOfBook), calculateCostAndShipping(calculateCost(20.99, qualityOfBook), qualityOfBook, shippingCost));
 								}
 							}
 						}
@@ -123,6 +123,27 @@ public class BookPriceData {
 		}
 		else if (qualityOfBook == 5) {
 			result = "Acceptable";
+		}
+
+		return result;
+	}
+
+	public static double calculateCostAndShipping(double baseCost, int qualityOfBook, double shippingAmount) {
+		double result = 0;
+		if (qualityOfBook == 1) {
+			result = baseCost + shippingAmount;
+		}
+		else if (qualityOfBook == 2) {
+			result = baseCost + shippingAmount;
+		}
+		else if (qualityOfBook == 3) {
+			result = baseCost + shippingAmount;
+		}
+		else if (qualityOfBook == 4) {
+			result = baseCost + shippingAmount;
+		}
+		else if (qualityOfBook == 5) {
+			result = baseCost + shippingAmount;
 		}
 
 		return result;
