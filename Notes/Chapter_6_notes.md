@@ -52,7 +52,7 @@ The diagram is a box that is divided into three sections.
 | getWidth()  |
 | getArea()   |
 
-**Writing the Code for a Class**
+### **Writing the Code for a Class**
 First, create a new file named *Rectangle.java*
 In the file we will start by writing a general class "skeleton" as follows:
 ```java
@@ -82,7 +82,7 @@ It indicates that these variables may not be accessed by statements outside the 
 By using the private access modifier, a class can hide its data from code outside the class.
 When a class's fields are hidden from outside code, the data is protected from accidental corruption.
 
-**Writing the setLength Method**
+### **Writing the setLength Method**
 This method will allow code outside class to store a value in the length field.
 
 ```java
