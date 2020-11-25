@@ -81,3 +81,34 @@ It indicates that these variables may not be accessed by statements outside the 
 
 By using the private access modifier, a class can hide its data from code outside the class.
 When a class's fields are hidden from outside code, the data is protected from accidental corruption.
+
+**Writing the setLength Method**
+This method will allow code outside class to store a value in the length field.
+
+```java
+/**
+  Rectangle class, phase 1
+  Under construction
+*/
+
+public class Rectangle
+{
+	private double length;
+	private double width;
+
+	/**
+	  The setLength method stores a value in the
+	  length field.
+	  @param len The value to store in length.
+	*/
+	
+	public void setLength(double len)
+	{
+		length = len;
+	}
+}
+```
+
+Notice that the word **static** does not appear in the method header.
+When a method is designed to work on an instance of a class, it is referred to as an *instance method*, and you do not write the word **static** in the header.
+Because this method will store a value in the length field of an instance of the Rectangle class, it is an instance method.
