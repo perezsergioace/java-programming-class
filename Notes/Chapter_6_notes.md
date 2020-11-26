@@ -411,3 +411,20 @@ Instance fields are visible to all of the class's instance methods.
 A parameter variable is, in essence, a local variable. So, you cannot give a parameter variable and a local variable in the same method the same name.
 However, you can have a local variable or a parameter variable with the same name as a field.
 When you do, the name of the local or parameter variable **shadow** the name of the field.
+
+## **6.8 Packages and import Statements**
+The classes in the Java API are organized into packages.
+An import statement tells the compiler which package a class is located in.
+
+A **package** is simply a group of related classes.
+Each package also has a name.
+
+There are two types of import statements: explicit and wildcard.
+An **explicit import** statement identifies the package location of a single class.
+```java
+import java.util.Scanner;
+```
+A **wild card import** statement tells the compiler to import all of the classes in a package.
+```java
+import java.util.*;
+```
