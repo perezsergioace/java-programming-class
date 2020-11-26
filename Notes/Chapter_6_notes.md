@@ -404,3 +404,10 @@ Method overloading is important because sometimes you need several different way
 The process of matching a method call with the correct method is known as **binding**.
 When an overloaded method is being called, Java uses the method's name and parameter list to determine which method to bind the call to.
 A method's **signature** consists of the method's name and the data type of the method's parameters, in the order that they appear.
+
+## **6.7 Scope of Instance Fields**
+Instance fields are visible to all of the class's instance methods.
+
+A parameter variable is, in essence, a local variable. So, you cannot give a parameter variable and a local variable in the same method the same name.
+However, you can have a local variable or a parameter variable with the same name as a field.
+When you do, the name of the local or parameter variable **shadow** the name of the field.
