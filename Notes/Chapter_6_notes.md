@@ -392,3 +392,5 @@ A constructor that does not accept arguments is known as a **no-arg constructor*
 There is one class that can be instantiated without the new operator: the **String** class.
 
 ## **6.5 Passing Objects as Arguments**
+When an object is passed as an argument to a method, the object's address is passed into the method's parameter variable.
+As a result, the parameter references the object.
