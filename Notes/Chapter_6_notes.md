@@ -355,3 +355,10 @@ To indicate the data type of a field, place a colon followed by the name of the 
 | + getArea() : double				|
 
 ## **6.3 Instance Fields and Method**
+Each instance of a class has its own set of fields, which are known as instance fields.
+You can create several instance of a class and store different values in each instance's fields.
+The methods that operate on an instance of a class are known as instance methods.
+
+The methods that operate on an instance of a class are known as **instance methods**.
+
+## **6.4 Constructors**
