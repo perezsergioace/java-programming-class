@@ -428,3 +428,17 @@ A **wild card import** statement tells the compiler to import all of the classes
 ```java
 import java.util.*;
 ```
+
+## **6.9 Focus on Object-Oriented Design: Finding the Classes and Their Responsibilities**
+Over the years, software professionals have develop numerous techniques for finding the classes in a give problem.
+One simple and popular technique involves the following steps:
+1. Get a written description of the problem domain.
+2. Identify all the nouns (including pronouns and noun phrases) in the description. Each of these is a potential class.
+3. Refine the list to include only the classes that are relevant to the problem.
+
+The **problem domain** is the set of real-world objects, parties, and major events related to the problem.
+
+Once the classes have been identified, the next task is to identify each class's responsibilities.
+A class's **responsibilities** are as follows:
+* The things that the class is responsible for knowing
+* The actions that the class is responsible for doing
