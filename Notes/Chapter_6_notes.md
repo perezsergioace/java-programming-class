@@ -362,3 +362,33 @@ The methods that operate on an instance of a class are known as instance methods
 The methods that operate on an instance of a class are known as **instance methods**.
 
 ## **6.4 Constructors**
+A constructor is a method that is automatically called when an object is created.
+A constructor is a method that is automatically called when an instance of a class is created.
+They are called "constructors" because they help construct an object.
+
+Reference variables can also be declared without being initialized, as in the following statement:
+```java
+Rectangle box;
+```
+
+Because the box variable does not yet hold an object's address, it is an **uninitialized reference variable**.
+After declaring the reference variable, the following statement can be used to assign it the address of an object.
+A local reference variable must reference an object before it can be used. Otherwise a compiler error will occur.
+
+When an object is created, its constructor is always called.
+If you do not write a constructor in a class, Java automatically provides one when the class is compiled.
+The constructor that Java provides is known as the **default constructor**.
+The default constructor doesn't accept arguments.
+It sets all of the objects's numeric fields to 0 and boolean fields to false.
+If the object has any fields that are reference variables, the default constructor sets them to the special value null, which means they do not reference anything.
+```java
+// Now we wrote our own constructor for the Rectangle class.
+Rectangle box = new Rectangle(); // Error! Must now pass arguments.
+```
+Because we have added our own constructor, which requires two arguments, the class no long has a default constructor.
+
+A constructor that does not accept arguments is known as a **no-arg constructor**.
+
+There is one class that can be instantiated without the new operator: the **String** class.
+
+## **6.5 Passing Objects as Arguments**
