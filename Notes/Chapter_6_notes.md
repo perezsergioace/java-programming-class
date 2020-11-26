@@ -394,3 +394,13 @@ There is one class that can be instantiated without the new operator: the **Stri
 ## **6.5 Passing Objects as Arguments**
 When an object is passed as an argument to a method, the object's address is passed into the method's parameter variable.
 As a result, the parameter references the object.
+
+## **6.6 Overloading Methods and Constructors**
+Two or more methods in a class may have the same name as long as their parameter list are different. This also applies to constructors.
+
+When a method is **overloaded**, it means that multiple methods in the same class have the same name, but use different types of parameters.
+Method overloading is important because sometimes you need several different ways to perform the same operation.
+
+The process of matching a method call with the correct method is known as **binding**.
+When an overloaded method is being called, Java uses the method's name and parameter list to determine which method to bind the call to.
+A method's **signature** consists of the method's name and the data type of the method's parameters, in the order that they appear.
