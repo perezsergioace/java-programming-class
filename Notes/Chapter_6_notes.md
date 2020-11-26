@@ -109,6 +109,249 @@ public class Rectangle
 }
 ```
 
+It's important always to write comments that describe a class's methods so that in the future, anyone reading the code will understand it.
+
 Notice that the word **static** does not appear in the method header.
 When a method is designed to work on an instance of a class, it is referred to as an *instance method*, and you do not write the word **static** in the header.
 Because this method will store a value in the length field of an instance of the Rectangle class, it is an instance method.
+When the method executes the len parameter variable will hold the value of an argument that is passed to the method. That value is assigned to the **length** field.
+Notice that the Rectangle class does not have a main method. This class is not a complete program.
+Other programs will use the Rectangle class to create objects.
+The programs that create and use these objects will have their own main methods.
+
+```java
+/**
+  This program demonstrates the Rectangle class's setLength method.
+*/
+
+public class LengthDemo
+{
+	public static void main(String[] args)
+	{
+		// Create a Rectangle object and assign its
+		// address to the box variables.
+		Rectangle box = new Rectangle();
+
+		// Indicate what we are doing.
+		System.out.println("Sending the value of 10.0 " + 
+					"to the setLength method.");
+		
+		// Call the box object's setLength method.
+		box.setLength(10.0);
+
+		// Indicate we are done.
+		System.out.println("Done.");
+	}
+}
+```
+
+```java
+// Program Output
+Sending the value 10.0 to the setLength method.
+```
+
+The file using the method/class should be in the same folder or directory as the file **Rectangle.java**.
+When the compiler reds the source code for lengthDemo.java and sees that a class named Rectangle is being used, it looks in the current folder or directory for the file Rectangle.class.
+That file does not exist, however, because we have not yet compiled Rectangle.java.
+The compiler searches for the file Rectangle.java and compiles it.
+This creates the file Rectangle.class, which makes the Rectangle class available.
+The compiler then finishes compiling LengthDemo.java.
+All of a class's numeric fields are initialized to 0 by default.
+
+The setWidth method is similar to setLength. It accepts an argument, which is assigned to the width field.
+```java
+/**
+	Rectangle class, phase 2
+	Under consturction!
+*/
+
+public class Rectangle
+{
+	private double length;
+	private double width;
+
+	/**
+		The setLength method stores a value in the
+		lenght field.
+		@param len The value to store in length
+	*/
+	
+	public void setLength(double len)
+	{
+		lenght = len;
+	}
+
+	/**
+		The setWidth method stores a value in the width field.
+		@param w The value to store in width.
+	*/
+
+	public void setWidth(double w)
+	{
+		width = w;
+	}
+}
+```
+The setWidth method has a parameter variable named w, which is assigned to the width field.
+
+We must write methods that allow code outside the class to get the values that are stored in these field.
+That's what the getLength and getWidth methods will do.
+The getLength method will return the value stored in the length field, and the getWidth method will return the value stored in the width field.
+Here is the code for the getLength method:
+```java
+public double getLength()
+{
+	return length;
+}
+```
+
+The getWidth method is similar to getLength. The code for the method follows:
+```java
+public double getWidth()
+{
+	return width;
+}
+```
+
+### **Writing the getArea Method**
+The getArea method returns the area of a rectangle , which is its length multiplied by its width.
+```java
+public double getArea()
+{
+	return length * width;
+}
+```
+
+```java
+/**
+	Rectangle class, phase 4
+	Under construction
+*/
+
+public class Rectangle
+{
+	private double length;
+	private double width;
+
+	/**
+		The setLength method stores a value in the
+		lenght field.
+		@param len The value to store in length
+	*/
+	
+	public void setLength(double len)
+	{
+		lenght = len;
+	}
+
+	/**
+		The setWidth method stores a value in the width field.
+		@param w The value to store in width.
+	*/
+
+	public void setWidth(double w)
+	{
+		width = w;
+	}
+
+	/**
+		The getLength method returns a Rectangle
+		object's length.
+		@return The value in the length field.
+	*/
+
+	public double getLength()
+	{
+		return length;
+	}
+
+	/**
+		The getWidth method returns a Rectangle
+		object's width.
+		@return The value in the width field.
+	*/
+
+	public double getWidth()
+	{
+		return width;
+	}
+
+	/**
+		The getArea method returns a Rectangle
+		object's area.
+		@return The product of length times width.
+	*/
+
+	public double getArea()
+	{
+		return length * width;
+	}
+}
+```
+
+**Using the Rectangle class**
+```java
+/**
+	This program demonstrates the Rectangle class's
+	setLength, setWidth, getLength, getWidth, and getArea methods.
+*/
+
+public class RectangleDemo
+{
+	public static void main(String[] args)
+	{
+		// Create a Rectangle object.
+		Rectangle box = new Rectangle();
+
+		// Set length to 10.0 and width to 20.0
+		box.setLength(10.0);
+		box.setWidth(20.0);
+
+		// Display the length.
+		System.out.println("The box'x length is " + box.getLength());
+
+		// Display the width.
+		System.out.println("The box'x width is " + box.getWidth());
+
+		// Display the area.
+		System.out.println("The box's area is " + box.getArea());
+	}
+}
+
+// Program Output
+// The box's length is 10.0
+// The box's width is 20.0
+// The box's area is 200.0
+```
+
+A method that gets a value from a class's field but does not change it is known as an **accessor method**.
+A method that stores value in a field or changes the value of a field in some other way is known as a **mutator method**.
+In the Rectangle class, the methods getLength and getWidth are accessors, and the methods setLength and setWidth are mutators.
+
+Data hiding is an important concept in object-oriented programming.
+You hide an object's internal data by making the class's fields private, and making the methods that access those fields public.
+By hiding a class's data, and allowing it to be accessed only through the class's method, you can better ensure that the class will operate as you intended it to.
+
+When the value of an item is dependent on other data and that item is not updated when the other data is changed, it is said that the item has become **stale**.
+
+In a UML diagram, you have the option to place a **-** character before a member name to indicate that is is private, or a **+** character to indicate that it is public.
+To indicate the data type of a field, place a colon followed by the name of the data type after the name of the field.
+
+|First Section|
+|:------------|
+| Rectangle   |
+
+|Second Section|
+|:----------------------|
+| - length : double		|
+| - width : double		|
+
+|Third Section|
+|:----------------------------------|
+| + setLength(len : double) : void	|
+| + setWidth(w : double) : void		|
+| + getLength() : double			|
+| + getWidth() : double				|
+| + getArea() : double				|
+
+## **6.3 Instance Fields and Method**
