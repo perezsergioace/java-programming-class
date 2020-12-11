@@ -9,6 +9,18 @@ public class Rectangle
     private double width;
 
     /**
+     * Constructor
+     * @param len The length of the rectangle.
+     * @param w The width of the rectangle.
+     */
+
+    public Rectangle(double len, double w)
+    {
+        length = len;
+        width = w;
+    }
+
+    /**
      * The setLength method stores a value in the 
      * length field
      * @param len The value to store in length.
