@@ -379,7 +379,7 @@ When an object is created, its constructor is always called.
 If you do not write a constructor in a class, Java automatically provides one when the class is compiled.
 The constructor that Java provides is known as the **default constructor**.
 The default constructor doesn't accept arguments.
-It sets all of the objects's numeric fields to 0 and boolean fields to false.
+It sets all of the objects's numeric fields to 0 and Boolean fields to false.
 If the object has any fields that are reference variables, the default constructor sets them to the special value null, which means they do not reference anything.
 ```java
 // Now we wrote our own constructor for the Rectangle class.
