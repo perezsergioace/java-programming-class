@@ -1,13 +1,12 @@
 import java.util.concurrent.*;
 
 /**
-   This program tests the TriviaQuestion class.
-   @author Maggie
-   1/8/2018
-*/
+ * This program tests the TriviaQuestion class.
+ * 
+ * @author Maggie 1/8/2018
+ */
 
-public class TriviaQuiz
-{
+public class TriviaQuiz {
 
 	// Question data (to facilitate testing)
 	public static String q2 = "Who was Alan Turing? ";
@@ -25,49 +24,48 @@ public class TriviaQuiz
 	public static int q3correct = 2;
 	public static int q3points = 10;
 
-   public static int getAnswerCountdown() throws InterruptedException  {
-	   String answer;
-	   ConsoleInput reader = new ConsoleInput(1000,5,TimeUnit.SECONDS);
-	   answer = reader.readLine();
-	   return Integer.parseInt(answer);
-   }
-	
-   /**
-       A method to exercise the TriviaQuestion class.
- * @throws InterruptedException 
-   */
-   public static void main(String[] args) throws InterruptedException
-   {
-	  // Make three questions
-	 TriviaQuestion question1, question2, question3; 
-	  
-	  // Create a variable for user input.
-	  int answer;
-	  
-	  // Variable for receiving user's score.
-	  double score;
-	  
-      // Create three questions.
-      question1 = new TriviaQuestion();
-	  question2 = new TriviaQuestion(q2, q2ans1, q2ans2, q2ans3, q2ans4, q2correct, q2points);
-	  question3 = new TriviaQuestion(q3, q3ans1, q3ans2, q3ans3, q3ans4, q3correct, q3points);
-	  
-	  // Pose each question, get an answer, report points.
-	  System.out.println(question1.poseQuestion());
-	  answer = getAnswerCountdown();
-	  score = question1.getScore(answer);
-	  System.out.println("You scored " + score + " points.\n");
-	
-	  System.out.println(question2.poseQuestion());
-	  answer = getAnswerCountdown();
-	  score = question2.getScore(answer);
-	  System.out.println("You scored " + score + " points.\n");
+	public static int getAnswerCountdown() throws InterruptedException {
+		String answer;
+		ConsoleInput reader = new ConsoleInput(1000, 5, TimeUnit.SECONDS);
+		answer = reader.readLine();
+		return Integer.parseInt(answer);
+	}
 
-	  System.out.println(question3.poseQuestion());
-	  answer = getAnswerCountdown();
-	  score = question3.getScore(answer);
-	  System.out.println("You scored " + score + " points.");
-	  
-	  
-   }
+	/**
+	 * A method to exercise the TriviaQuestion class.
+	 * 
+	 * @throws InterruptedException
+	 */
+	public static void main(String[] args) throws InterruptedException {
+		// Make three questions
+		TriviaQuestion question1, question2, question3;
+
+		// Create a variable for user input.
+		int answer;
+
+		// Variable for receiving user's score.
+		double score;
+
+		// Create three questions.
+		question1 = new TriviaQuestion();
+		question2 = new TriviaQuestion(q2, q2ans1, q2ans2, q2ans3, q2ans4, q2correct, q2points);
+		question3 = new TriviaQuestion(q3, q3ans1, q3ans2, q3ans3, q3ans4, q3correct, q3points);
+
+		// Pose each question, get an answer, report points.
+		System.out.println(question1.poseQuestion());
+		answer = getAnswerCountdown();
+		score = question1.getScore(answer);
+		System.out.println("You scored " + score + " points.\n");
+
+		System.out.println(question2.poseQuestion());
+		answer = getAnswerCountdown();
+		score = question2.getScore(answer);
+		System.out.println("You scored " + score + " points.\n");
+
+		System.out.println(question3.poseQuestion());
+		answer = getAnswerCountdown();
+		score = question3.getScore(answer);
+		System.out.println("You scored " + score + " points.");
+
+	}
 }
