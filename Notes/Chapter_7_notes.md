@@ -63,3 +63,61 @@ Usually, this is best done with a loop.
 
 ## **7.3 - Passing Arrays as Arguments to Methods**
 An array can be passed as an argument to a method. To pass an array, you pass the value in the variable that references the array.
+
+## **7.4 - Some Useful Array Algorithms and Operations Comparing Arrays**
+To compare the contents of two arrays, you must compare the elements of the two arrays.
+To sum the values in an array you must use a loop with an accumulator variable. The loops adds the value in each array element to the accumulator.
+The first step in calculating the average of all the values in an array is to sum the values. The second step is to divide the sum by the number of elements in the array.
+
+Finding the Highest and Lowest Values in a Numeric Array: First we copy the value in the first array element to the variable highest. Then the loop compares all of the remaining array elements, beginning at subscript 1, to the value in the highest. Each time it finds a value in the array that is greater than highest, it copies that value to highest. When the loops has finished, highest will contain the highest value in the array.
+Find the lowest value in a numeric array is nearly identical.
+
+## **7.5 - Returning Arrays from Methods**
+In addition to accepting arrays as arguments, methods may also return arrays.
+A method can return a reference to an array. To do so, the return type of the method must be declared properly. For example, look at the following method definition:
+```java
+public static double[] getArray()
+{
+	double[] array = { 1.2, 2.3, 4.5, 6.7, 8.9 };
+	return array;
+}
+```
+
+## **7.6 - String Arrays**
+An array of String objects may be created, but if the array is uninitialized, each String in the array must be created individually.
+```java
+String[] names = { "Bill", "Susan", "Steven", "Jean" };
+```
+When you create an uninitialized array of String objects, you must assign a value to each element in the array that you intend to use.
+
+## **7.7 - Arrays of Objects**
+You may create arrays of objects that are instances of classes that you have written.
+
+## **7.8 - The Sequential Search Algorithm**
+A search algorithm is a method of locating a specific item in a larger collection of data.
+The sequential search algorithm uses a loop to sequentially step through an array, starting with the first element. It compares each element with the value being searched for and stops when the value is found or the end of the array is encountered. If the value being searched for is not in the array, the algorithm unsuccessfully searches to the end of the array.
+
+## **7.9 - Two-Dimensional Arrays**
+A two-dimensional array is aan array of arrays. It can be thought of as having rows and columns.
+The arrays that you have studied so far are one-dimensional arrays. They are called *one dimensional* because they can hold only one set of data.
+Two-dimensional arrays, which are sometimes called *2D arrays*, can hold multiple sets of data.
+
+To declare a two-dimensional array, two sets of brackets and two size declarators are required: The first one is for the number of rows and the second one is for the number of columns.
+```java
+double[][] scores = new double[3][4];
+```
+
+When initializing a two-dimensional array, you enclose each row's initialization list in its own set of braces.
+```java
+int[][] numbers = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+```
+
+To sum all the elements of a two-dimensional array, you can use a pair of nested loops to add the contents of each element to an accumulator.
+
+Two-dimensional array passed into a method:
+```java
+private static void showArray(int[][] array)
+```
+
+When the rows of a two-dimensional array are of different lengths, the array is known as a ragged array.
+You create a ragged array by first creating a two-dimensional array with a specific number of rows, but no columns. Next, you create the individual rows.
