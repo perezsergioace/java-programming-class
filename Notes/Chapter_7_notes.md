@@ -121,3 +121,79 @@ private static void showArray(int[][] array)
 
 When the rows of a two-dimensional array are of different lengths, the array is known as a ragged array.
 You create a ragged array by first creating a two-dimensional array with a specific number of rows, but no columns. Next, you create the individual rows.
+
+## **7.10 - Arrays with Three or More Dimensions**
+Java does not limit the number of dimensions that an array may have. It is possible to create arrays with multiple dimensions, to model data that occurs in multiple sets.
+
+## **7.11 - The Selection Sort and the Binary Search Algorithm**
+A sorting algorithm is used to arrange data into some order. The selection sort and the binary search are popular sorting and searching algorithms.
+
+The *selection sort* works likes this: The smallest value in the array is located and moved to element 0. Then the next smallest value is located and moved to element 1. This process continues until all of the elements have been placed in their proper order.
+
+## **7.12 - Command-Line Arguments and Variable-Length Argument Lists**
+When you invoke a Java program from the operating system command line, you can specify arguments that are passed into the main method of the program. In addition, you can write a method that takes a variable number of arguments. When the method runs, it cann determine the number of arguments that were passed to it and act accordingly.
+
+Java provides a mechanism known as *variable-length argument lists*, which makes it possible to write a method that takes a variable number of arguments.
+```java
+public static int sum(int... numbers)
+{
+	int total = 0; // Accumulator
+
+	// Add all the values in the numbers array.
+	for (int val : numbers)
+		total += val;
+
+	// Return the total.
+	return total;
+}
+```
+Notice the declaration of the numbers parameter in the method header. The ellipsis (three periods) that follows the data type indicates that numbers is a special type of parameter known as a *vararg parameter*. A vararg parameter can take a variable number of arguments. In fact, vararg parameters are actually arrays.
+
+## **7.13 - The ArrayList Class**
+ArrayList is a class in the Java API that is similar to an array and allows you to store objects. Unlike an array, and ArrayList object's size is automatically adjusted to accommodate the number of items being stored in it.
+ArrayList object is similar to an array of objects, but offers many advantages over an array.
+* An ArrayList object automatically expands as items are added to it.
+* In addition to adding items to an ArrayList, you can remove item as well.
+* An ArrayList object automatically shrinks as items are removed from it.
+The ArrayList class is in the java.util package, so the following import statement is required:
+```java
+import java.util.ArrayList;
+```
+
+```java
+ArrayList<String> nameList = new ArrayList<String>();
+
+nameList.add("James");
+nameList.add("Catherine");
+nameList.add("Bill");
+```
+The items that are stored in an ArrayList have a corresponding index.
+The ArrayList class has a size method that reports the number of items stored in an ArrayList. It returns the number of items as an int.
+The ArrayList class's get method returns the item stored at a specific index. You pass the index as an argument to the method.
+
+The ArrayList class has a **toString** method that returns a string representing all of the items stored in an ArrayList object.
+
+The ArrayList class has a remove method that removes an item at a specific index. You pass the index as an argument to the method.
+
+The ArrayList class has an overloaded version of the add method that allows you to add an item at a specific index. This causes the item to be inserted into the ArrayList object at a specific position.
+```java
+// Now insert an item at index 1.
+nameList.add(1, "Mary");
+```
+
+The ArrayList class's set method can be used to replace an item at a specific index with another item. For example, the following statement will replace the item currently at index 1 with the String "Jennifer":
+```java
+nameList.set(1, "Jennifer");
+```
+
+An ArrayList object also has a *capacity*, which is the number of items it can store without having to increase its size. When an ArrayList object is first created, using the no-arg constructor, it has an initial capacity of 10 items. this means that it can hold up to 10 items without having to increase its size. When the eleventh item is added, the ArrayList object must increase its size to accommodate the new item. You can specify a different starting capacity, if you desire, by passing an int argument to the ArrayList constructor.
+
+You can use the Diamond Operator like this:
+```java
+ArrayList<String> list = new ArrayList<String>();
+```
+or like this:
+```java
+ArrayList<String> list = new ArrayList<>();
+```
+This set of empty angled brackets (<>) is called the diamond operator. It causes the compiler to infer the required data type from the reference variable declaration.
