@@ -197,3 +197,4 @@ or like this:
 ArrayList<String> list = new ArrayList<>();
 ```
 This set of empty angled brackets (<>) is called the diamond operator. It causes the compiler to infer the required data type from the reference variable declaration.
+
