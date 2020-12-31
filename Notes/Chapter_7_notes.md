@@ -11,7 +11,7 @@ numbers = new int[6];
 The number inside the brackets is the array's *size declarator*.
 It indicates the number of elements, or values the array can hold.
 
-As with any other type of object, it is possilbe to declare a refereence variable and create an instance of an array with one statement.
+As with any other type of object, it is possible to declare a reference variable and create an instance of an array with one statement.
 ```java
 int[] numbers = new int[6];
 float[] temperatures = new float[100];
