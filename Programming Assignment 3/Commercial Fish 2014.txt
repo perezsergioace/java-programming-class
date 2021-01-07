@@ -1,0 +1,40 @@
+Alewife
+1735
+1645
+488
+Anchovies
+23410
+10371
+1680
+Atka mackerel
+69503
+96543
+22494
+Bluefish
+5182
+5538
+3106
+Blue runner
+301
+306
+268
+Bonito
+152
+140
+182
+Butterfish
+7292
+3319
+4754
+Catfish
+10000
+9405
+5118
+Atlantic Cod
+5170
+11196
+9358
+Pacific Cod
+717548
+664353
+153724
